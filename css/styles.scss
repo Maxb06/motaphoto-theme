@@ -4,10 +4,12 @@
     box-sizing: border-box;
 }
 
-.container {
+#page {
     max-width: 1440px;
     margin: 0 auto;
 }
+
+/* Header */
 
 .header-menu {
     display: flex;
@@ -51,4 +53,36 @@
       max-height: 966px;
     }
   }
+
+/* Footer */
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        .menu-item {
+            margin-right: 86px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    p {
+        margin-left: 86px; 
+    }
+}
+
 

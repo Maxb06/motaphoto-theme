@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <div class="container">
+    <div id="page">
         <header>
             <div class="header-menu">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo.png" alt="Logo du site">
