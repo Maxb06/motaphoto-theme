@@ -1,0 +1,9 @@
+cd C:\Users\maxim\Desktop\WordPress Local\motaphoto\app\public\wp-content\themes\motaphoto-theme\css
+
+
+
+sass --watch styles.scss:styles.css
+
+
+
+
