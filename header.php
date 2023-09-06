@@ -15,7 +15,6 @@
                     <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
                 </nav>
             </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nathalie-11.jpeg" alt="Image présentation site">
         </header>
         <main>
 
