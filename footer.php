@@ -4,12 +4,8 @@
                 <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
                 <p>TOUS DROITS RÉSERVÉS</p>
             </div>
+            <?php get_template_part('template_parts/contact-modal'); ?>
         </footer>
-        <div id="contactModal" class="modal">
-            <div class="modal-content">
-                <?php echo do_shortcode('[contact-form-7 id="b047b02" title="Modale Contact"]'); ?>
-            </div>
-        </div> 
     </div> <!-- #page -->
     <?php wp_footer(); ?>
 </body>
