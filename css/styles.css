@@ -68,6 +68,11 @@ header img {
 }
 
 /* Hero Header */
+.hero-header img {
+  width: 100%;
+  height: auto;
+}
+
 /* Footer */
 .footer-menu {
   display: flex;
