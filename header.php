@@ -10,7 +10,7 @@
     <div id="page">
         <header>
             <div class="header-menu">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo.png" alt="Logo du site">
+                <a href="http://motaphoto.local/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo.png" alt="Logo du site"></a>
                 <nav>
                     <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
                 </nav>
