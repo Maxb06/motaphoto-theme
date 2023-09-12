@@ -31,14 +31,15 @@
 		 </div>
 		 <div class="bottom-column">
 		 	<div class="contact-link">
+				<p>Cette photo vous intéresse ?</p>
         		<a href="#" class="contactButton" data-ref="<?php the_field('reference'); ?>">Contact</a>
     		</div>
 			<div class="navigation-links">
 				<div class="previous">
-      				<?php previous_post_link('%link', 'Photo précédente', TRUE, ' ', 'categorie'); ?>
+      				<?php previous_post_link('%link', '<img src="' . get_template_directory_uri() . '/assets/images/line6.png" alt="Photo précédente">', TRUE, ' ', 'categorie-photo'); ?>
     			</div>
     			<div class="next">
-      				<?php next_post_link('%link', 'Photo suivante', TRUE, ' ', 'categorie'); ?>
+      				<?php next_post_link('%link', '<img src="' . get_template_directory_uri() . '/assets/images/line7.png" alt="Photo suivante"', TRUE, ' ', 'categorie-photo'); ?>
     			</div>
 			</div>
 		 </div>
