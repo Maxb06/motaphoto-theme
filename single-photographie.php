@@ -2,8 +2,6 @@
 /**
  * The template for displaying photographie post
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
  * @package WordPress
  * @subpackage Motaphoto
  * @since Motaphoto 1.0
@@ -17,13 +15,27 @@
 	 ?>
 	 <div class="container">
 		 <div class="left-column">
-			 <!-- Utiliser PHP pour afficher dynamiquement le titre, la référence, la catégorie, le format, et la date de prise de vue de la photo -->
+		 <h2><?php the_title(); ?></h2>
+			<p><strong>Référence :</strong> <?php the_field('reference'); ?></p>
+			<p><strong>Catégorie :</strong> <?php the_terms( $post->ID, 'categorie', '', ', ', '' ); ?></p>
+			<p><strong>Format :</strong> <?php the_terms( $post->ID, 'format', '', ', ', '' ); ?></p>
+			<p><strong>Type :</strong> <?php the_field('type'); ?></p>
+			<p><strong>Date :</strong> <?php the_date('Y'); ?></p>
 		 </div>
 		 <div class="right-column">
-			 <!-- Utiliser PHP pour afficher la photo -->
+			<?php 
+			if ( has_post_thumbnail() ) {
+			the_post_thumbnail('full');
+			} 
+			?>
 		 </div>
 		 <div class="bottom-column">
-			 <!-- Utiliser PHP pour les interactions -->
+		 	<div class="contact-link">
+        		<a href="#" class="contactButton" data-ref="<?php the_field('reference'); ?>">Contact</a>
+    		</div>
+			<div class="navigation-links">
+				<!-- PHP pour la navigation entre les photos -->
+			</div>
 		 </div>
 	 </div>
 	 <?php
