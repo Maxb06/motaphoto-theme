@@ -7,7 +7,7 @@
         </section>
 
         <div class="photo-catalog">
-            <h1>Catalogue de photos</h1>
+            
             <?php
                 $args = array(
                     'post_type' => 'photographie',
@@ -24,12 +24,11 @@
                     <a href="<?php the_permalink(); ?>">
                         <?php if ( has_post_thumbnail() ) : ?>
                             <?php the_post_thumbnail('thumbnail'); ?>
-                         <?php endif; ?>
-                        <h2><?php the_title(); ?></h2>
+                         <?php endif; ?>                    
                     </a>
                 </div>
-
-                <?php endwhile; ?> <!-- fin de la boucle -->
+            <!-- fin de la boucle -->
+                <?php endwhile; ?> 
                 <?php wp_reset_postdata(); ?>
 
             <?php else : ?> 
