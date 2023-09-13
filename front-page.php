@@ -20,13 +20,9 @@
 
             <!-- Boucle requête perso -->
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                <div class="photo-item">
-                    <a href="<?php the_permalink(); ?>">
-                        <?php if ( has_post_thumbnail() ) : ?>
-                            <?php the_post_thumbnail('full'); ?>
-                         <?php endif; ?>                    
-                    </a>
-                </div>
+                
+            <?php get_template_part('template-parts/photo-block'); ?>
+
             <!-- fin de la boucle -->
                 <?php endwhile; ?> 
                 <?php wp_reset_postdata(); ?>
