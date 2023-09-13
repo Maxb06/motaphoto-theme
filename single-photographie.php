@@ -43,10 +43,42 @@ while ( have_posts() ) :
     			</div>
 			</div>
 		</div>
-		<div class="related-photos"> <!-- Les 2 vignettes photos -->
-		
+
+		<?php 
+			$current_post_id = get_the_ID();
+			$categories = wp_get_post_terms( $current_post_id, 'categorie-photo', array( 'fields' => 'ids' ) );
+			$args = array(
+				'post_type' => 'photographie',
+				'post__not_in' => array( $current_post_id ),
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'categorie-photo',
+						'field'    => 'id',
+						'terms'    => $categories,
+					),
+				),
+				'posts_per_page' => 2,  // Nombre de photos à afficher
+			);
+			$related_photos = new WP_Query( $args );
+		?>
+
+		<div class="related-photos"> <!-- Les 2 vignettes photos --> 
+
+			<?php if ( $related_photos->have_posts() ) : ?>
+				<?php while ( $related_photos->have_posts() ) : $related_photos->the_post(); ?>
+				<div class="related-photo-item">
+					
+				<?php get_template_part('template-parts/photo-block'); ?>
+				
+				</div>
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+				<?php else : ?>
+				<p>Pas de photos apparentées.</p>
+    		<?php endif; ?>
 		</div>
 	</div>
+
 <?php
 endwhile; // End of the loop.
  
