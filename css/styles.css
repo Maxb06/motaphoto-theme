@@ -143,6 +143,49 @@ header img {
 }
 
 /* Page photographie */
+.both-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.left-column {
+  width: 420px;
+  height: 321px;
+}
+.left-column p {
+  font-family: Space Mono;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.left-column h2 {
+  font-size: 66px;
+}
+
+.title-related-photos {
+  margin-bottom: 52px;
+}
+
+.container-photos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-link {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+}
+
+.navigation-links {
+  display: flex;
+  gap: 10px;
+}
+
 /*
 .photo-info {
   width: 50vw;
