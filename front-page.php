@@ -11,7 +11,7 @@
             <?php
                 $args = array(
                     'post_type' => 'photographie',
-                    'posts_per_page' => 8, 
+                    'posts_per_page' => 16, 
                 );
                 $the_query = new WP_Query( $args );
             ?>
