@@ -133,6 +133,10 @@ header img {
 }
 
 /* Hero Header */
+.hero-header {
+  margin-bottom: 162px;
+}
+
 .hero-header img {
   width: 100%;
   height: auto;
@@ -168,8 +172,45 @@ header img {
 }
 
 /* Page photographie */
-/* Page d'acueil */
+/*
+.photo-info {
+  width: 50vw;
+  border: 2px solid red;
+}
+.photo-display {
+  width: 50vw;
+  border: 2px solid orange;
+  width: 563px;
+  height: 844px;
+}
+.photo-actions {
+  height: 118px;
+  border: 2px solid blue;
+}
+*/
+/* Page d'accueil */
+/*
 .photo-item {
+  width: 564px;
+  height: 495px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+*/
+.photo-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 162px;
+  margin-bottom: 130px;
+}
+
+.photo-item {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
   width: 564px;
   height: 495px;
 }
