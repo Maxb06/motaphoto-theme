@@ -6,7 +6,7 @@
             </div>
         </section>
 
-        <div class="photo-catalog">
+        <section class="photo-catalog">
             
             <?php
                 $args = array(
@@ -30,6 +30,7 @@
             <?php else : ?> 
                 <p><?php _e( 'Désolé, aucune photo n\'a été trouvée.' ); ?></p>
             <?php endif; ?>
-        </div>
+
+        </section>
 
 <?php get_footer(); ?>
