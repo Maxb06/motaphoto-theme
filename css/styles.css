@@ -197,6 +197,7 @@ header img {
   justify-content: center;
   align-items: center;
   height: 40px;
+  width: 100%;
   margin-top: 130px;
 }
 .footer-menu ul {
