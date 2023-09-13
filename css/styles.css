@@ -218,8 +218,13 @@ header img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 162px 146px 130px 146px;
+  /*
   margin-top: 162px;
   margin-bottom: 130px;
+  margin-left: 146px;
+  margin-right: 146px;
+  */
 }
 
 .photo-item {
@@ -242,6 +247,7 @@ header img {
   height: 40px;
   width: 100%;
   margin-top: 130px;
+  border-top: 1px solid #000;
 }
 .footer-menu ul {
   display: flex;
