@@ -1,16 +1,16 @@
 <?php
 /**
- * The template for displaying photographie post
- *
- * @package WordPress
- * @subpackage Motaphoto
- * @since Motaphoto 1.0
- */
+* The template for displaying photographie post
+*
+* @package WordPress
+* @subpackage Motaphoto
+* @since Motaphoto 1.0
+*/
 
- get_header();
+get_header();
  
- /* Start the Loop */
- while ( have_posts() ) :
+/* Start the Loop */
+while ( have_posts() ) :
 	the_post();
 	?>
 	<div class="container">
@@ -43,12 +43,12 @@
     			</div>
 			</div>
 		</div>
-		<div class="related-photos">
+		<div class="related-photos"> <!-- Les 2 vignettes photos -->
 		
 		</div>
 	</div>
 <?php
- endwhile; // End of the loop.
+endwhile; // End of the loop.
  
- get_footer();
+get_footer();
  
