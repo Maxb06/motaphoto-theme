@@ -27,3 +27,9 @@ function register_my_menus() {
   add_action( 'init', 'register_my_menus' );
 
 
+/*
+add_action( 'after_setup_theme', 'your_theme_setup' );
+function your_theme_setup() {
+    add_image_size( 'custom-size', 563, 844, true );
+}
+*/
