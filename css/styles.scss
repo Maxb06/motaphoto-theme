@@ -169,6 +169,10 @@ p {
 .left-column {
   width: 420px;
   height: 321px;
+  width: 50%;
+  border-bottom: 1px solid black;
+  margin-left: 146px;
+  margin-right: 20px;
   p {
     font-family: Space Mono;
     font-size: 14px;
@@ -177,6 +181,18 @@ p {
     margin-top: 20px;
   }
 }
+
+.right-column {
+  width: 50%;
+  margin-right: 146px;
+  margin-left: 20px;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
 
 .title-related-photos {
   margin-bottom: 52px;
