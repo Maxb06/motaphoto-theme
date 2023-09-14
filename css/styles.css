@@ -165,6 +165,9 @@ header img {
   text-transform: uppercase;
   margin-top: 20px;
 }
+.left-column h2 {
+  width: 15vw;
+}
 
 .right-column {
   width: 50%;

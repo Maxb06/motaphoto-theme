@@ -173,14 +173,16 @@ p {
   margin-left: 146px;
   margin-right: 20px;
   padding-bottom: 37px; 
-  
-  p {
+    p {
     font-family: Space Mono;
     font-size: 14px;
     letter-spacing: 1.4px;
     text-transform: uppercase;
     margin-top: 20px;
   }
+    h2 {
+      width: 15vw;
+    }
 }
 
 .right-column {
