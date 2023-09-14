@@ -38,10 +38,10 @@ while ( have_posts() ) :
     		</div>
 			<div class="navigation-links"> <!-- Flèches navigations -->
 				<div class="previous">
-      				<?php previous_post_link('%link', '<img src="' . get_template_directory_uri() . '/assets/images/line6.png" alt="Photo précédente">', TRUE, ' ', 'categorie-photo'); ?>
+      				<?php next_post_link('%link', '<img src="' . get_template_directory_uri() . '/assets/images/line6.png" alt="Photo précédente">', TRUE, ' ', 'categorie-photo'); ?>
     			</div>
     			<div class="next">
-      				<?php next_post_link('%link', '<img src="' . get_template_directory_uri() . '/assets/images/line7.png" alt="Photo suivante">', TRUE, ' ', 'categorie-photo'); ?>
+      				<?php previous_post_link('%link', '<img src="' . get_template_directory_uri() . '/assets/images/line7.png" alt="Photo suivante">', TRUE, ' ', 'categorie-photo'); ?>
     			</div>
 			</div>
 		</div>
