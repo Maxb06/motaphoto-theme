@@ -166,11 +166,13 @@ p {
 
 .left-column {
   width: 420px;
-  height: 321px;
+  height: auto;
   width: 50%;
   border-bottom: 1px solid black;
   margin-left: 146px;
   margin-right: 20px;
+  padding-bottom: 37px; 
+  
   p {
     font-family: Space Mono;
     font-size: 14px;
@@ -185,17 +187,27 @@ p {
   margin-right: 146px;
   margin-left: 20px;
   img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     object-fit: cover;
   }
 }
 
-.title-related-photos {
-  margin-bottom: 52px;
+.bottom-column {
+  margin-left: 146px;
+  margin-right: 146px;
+  margin-top: 45px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid black;
 }
 
-.container-photos {
+.title-related-photos {
+  margin-bottom: 52px;
+  margin-top: 70px;
+  margin-left: 146px;
+}
+
+.container-photos { // les 2 photos associées
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -323,19 +335,5 @@ p {
   border-radius: 0;
 }
 
-/*
-<label> NOM
-    [text* your-name autocomplete:name] </label>
 
-<label> E-MAIL
-    [email* your-email autocomplete:email] </label>
-
-<label> RÉF. PHOTO
-    [text* reference id:photo-reference] </label>
-
-<label> MESSAGE
-    [textarea your-message] </label>
-
-[submit "Envoyer"]
-*/
 
