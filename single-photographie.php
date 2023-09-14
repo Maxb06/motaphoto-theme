@@ -34,22 +34,22 @@ while ( have_posts() ) :
 		<div class="bottom-column photo-actions">
 		 	<div class="contact-link">
 				<p>Cette photo vous intéresse ?</p> <!-- bouton contact -->
-        		<a href="#" class="contactButton" data-ref="<?php the_field('reference'); ?>">Contact</a>
+        		<button class="contactButton" data-ref="<?php the_field('reference'); ?>">Contact</button>
     		</div>
 			<div class="navigation-links"> <!-- Flèches navigations -->
 				<div class="previous">
       				<?php previous_post_link('%link', '<img src="' . get_template_directory_uri() . '/assets/images/line6.png" alt="Photo précédente">', TRUE, ' ', 'categorie-photo'); ?>
     			</div>
     			<div class="next">
-      				<?php next_post_link('%link', '<img src="' . get_template_directory_uri() . '/assets/images/line7.png" alt="Photo suivante"', TRUE, ' ', 'categorie-photo'); ?>
+      				<?php next_post_link('%link', '<img src="' . get_template_directory_uri() . '/assets/images/line7.png" alt="Photo suivante">', TRUE, ' ', 'categorie-photo'); ?>
     			</div>
 			</div>
 		</div>
-
+		
 		<div class="title-related-photos">
 			<h3>Vous aimerez aussi</h3>
 		</div>
-
+		
 		<?php // ARRAY requête wp_query pour les 2 photos images apparentées selon leur catégorie
 			$current_post_id = get_the_ID();
 			$categories = wp_get_post_terms( $current_post_id, 'categorie-photo', array( 'fields' => 'ids' ) );
