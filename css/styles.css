@@ -319,6 +319,10 @@ button.contactButton {
   margin-bottom: 6px;
 }
 
+.wpcf7-submit {
+  cursor: pointer;
+}
+
 .wpcf7-form .last-element {
   margin-bottom: 19px;
 }
