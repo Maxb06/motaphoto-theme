@@ -1,42 +1,41 @@
 /* Modale de contact, Header et page photographie avec remplissage réf */
-document.addEventListener("DOMContentLoaded", function() {
-  const contactButtons = document.querySelectorAll(".contactButton"); // Sélection de tous les boutons de contact
-  const modal = document.querySelector("#contactModal");
-  const refField = modal.querySelector("#photo-reference"); 
+
+jQuery(document).ready(function($) {
+  // Sélection de tous les boutons de contact
+  const contactButtons = $(".contactButton");
+  const modal = $("#contactModal");
+  const refField = modal.find("#photo-reference");
 
   // Initialiser propriétés modale mise en forme
-  if (modal) {
-    modal.style.display = 'none';
-    modal.style.justifyContent = 'center';
-    modal.style.alignItems = 'center';
-  }
-
-  // Écouter événements du clic pour tous les boutons de contact
-  contactButtons.forEach(function(button) {
-    button.addEventListener("click", function(event) {
-      event.preventDefault();
-      const photoRef = this.getAttribute("data-ref"); // Récupération de la référence de la photo
-      
-      if (refField) {
-        refField.value = photoRef; // Remplissage automatique du champ
-      }
-
-      if (modal) {
-        if (modal.style.display === 'none') {
-          modal.style.display = 'flex';
-        } else {
-          modal.style.display = 'none';
-        }
-      }
+  if (modal.length) {
+    modal.css({
+      "display": "none",
+      "justify-content": "center",
+      "align-items": "center"
     });
-  });
+  }
+  // Écouter événements du clic pour tous les boutons de contact
+  contactButtons.on("click", function(event) {
+    event.preventDefault();
+    const photoRef = $(this).attr("data-ref"); // Récupération de la référence de la photo
 
+    if (refField.length) {
+      refField.val(photoRef); // Remplissage automatique du champ
+    }
+
+    if (modal.length) {
+      if (modal.css("display") === "none") {
+        modal.css("display", "flex");
+      } else {
+        modal.css("display", "none");
+      }
+    }
+  });
   // Pour fermer la modale en cliquant en dehors
-  window.addEventListener("click", function(event) {
-    if (event.target === modal) {
-      modal.style.display = 'none';
+  $(window).on("click", function(event) {
+    if (event.target === modal.get(0)) {
+      modal.css("display", "none");
     }
   });
 });
-
 
