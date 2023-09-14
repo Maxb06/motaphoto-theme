@@ -33,7 +33,7 @@ while ( have_posts() ) :
 		</div>
 		<div class="bottom-column photo-actions">
 		 	<div class="contact-link">
-				<p>Cette photo vous intéresse ?</p> <!-- bouton contact, A FINIR -->
+				<p>Cette photo vous intéresse ?</p> <!-- bouton contact -->
         		<a href="#" class="contactButton" data-ref="<?php the_field('reference'); ?>">Contact</a>
     		</div>
 			<div class="navigation-links"> <!-- Flèches navigations -->
