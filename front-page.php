@@ -8,12 +8,12 @@
 
         <section class="photo-catalog">
             
-            <?php
+            <?php  // Tableau requête wp_query nombre de posts par page 
                 $args = array(
                     'post_type' => 'photographie',
                     'posts_per_page' => 16, 
                 );
-                $the_query = new WP_Query( $args );
+                $the_query = new WP_Query( $args ); 
             ?>
 
             <?php if ( $the_query->have_posts() ) : ?>
@@ -21,7 +21,7 @@
             <!-- Boucle requête perso -->
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 
-            <?php get_template_part('template-parts/photo-block'); ?>
+            <?php get_template_part('template-parts/photo-block'); ?><!--Inclusion template partiel bloc photo-->
 
             <!-- fin de la boucle -->
                 <?php endwhile; ?> 
