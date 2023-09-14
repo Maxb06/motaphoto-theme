@@ -185,6 +185,12 @@ p {
     }
 }
 
+.photo-info p a {
+  color: var(--noir-100);
+  text-decoration: none;
+  cursor: default;
+}
+
 .right-column {
   width: 50%;
   margin-right: 146px;
