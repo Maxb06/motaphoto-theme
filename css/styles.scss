@@ -85,9 +85,9 @@ p {
     height: 80px;
     box-shadow: 0px 14px 10px -2px rgba(0, 0, 0, 0.03);
     img {
-      width: 216px;
-      height: 14px;
-      margin-left: 146px;
+      width: 216px;           // Taille à définir
+      height: 14px;              // Taille à définir
+      margin-left: 146px;          // Taille à définir
     }
 
     nav {
@@ -98,10 +98,10 @@ p {
         display: flex;
   
         li {
-          margin-right: 45px;
+          margin-right: 45px;           // Taille à définir
   
           &:last-child {
-            margin-right: 146px;
+            margin-right: 146px;      // Taille à définir
           }
   
           a {
@@ -119,19 +119,31 @@ p {
     img {
       width: 100%;
       height: auto;
-      max-height: 966px;
+      max-height: 966px;           // Taille à définir
     }
   }
 
 /* Hero Header */
 
 .hero-header {
-  margin-bottom: 162px;
+  margin-bottom: 162px;        // Taille à définir
+  position: relative;
 }
 
 .hero-header img {
   width: 100%;
   height: auto;
+}
+
+.photo-event {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  margin-left: 220px;
+  margin-right: 227px;
+  width: 55vw;
+  display: inline-block;
+ 
 }
 
 /* Page d'accueil */
@@ -140,15 +152,23 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 162px 146px 130px 146px;
+  margin-top: 162px;   // Taille à définir
+  margin-right: 146px;
+  margin-left: 146px;
+  margin-bottom: 130px;
+  //max-width: 1440px;  // max-width et width à verifier
+  //width: 100%;         // max-width et width à verifier
+  //height: auto;       // Voir si conserver
+    @media (max-width: 1024px) {  // responsive @media 
+      flex-direction : column;    
+    }
 }
 
 .photo-item {
   flex-basis: calc(50% - 10px);
   margin-bottom: 20px;
-  width: 564px;
-  height: 495px;
-
+  width: 564px;   // Taille à définir
+  height: 495px;    // Taille à définir
   img {
     width: 100%;
     height: 100%;
@@ -162,17 +182,17 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 38px;
+  margin-top: 38px;   // Taille à définir
 }
 
 .left-column {
-  width: 420px;
-  height: auto;
-  width: 50%;
+  width: 420px;   // Taille à définir
+  height: auto;   // Taille à définir
+  width: 50%;     // Taille à définir
   border-bottom: 1px solid black;
-  margin-left: 146px;
-  margin-right: 20px;
-  padding-bottom: 37px; 
+  margin-left: 146px;   // Taille à définir
+  margin-right: 20px;   // Taille à définir
+  padding-bottom: 37px;   // Taille à définir
     p {
     font-family: Space Mono;
     font-size: 14px;
@@ -193,8 +213,8 @@ p {
 
 .right-column {
   width: 50%;
-  margin-right: 146px;
-  margin-left: 20px;
+  margin-right: 146px;   // Taille à définir
+  margin-left: 20px;     // Taille à définir
   img {
     max-width: 100%;
     height: auto;
@@ -203,18 +223,18 @@ p {
 }
 
 .bottom-column {
-  margin-left: 146px;
-  margin-right: 146px;
-  margin-top: 45px;
-  padding-bottom: 45px;
+  margin-left: 146px;   // Taille à définir
+  margin-right: 146px;  // Taille à définir
+  margin-top: 45px;     // Taille à définir
+  padding-bottom: 45px; // Taille à définir
   border-bottom: 1px solid black;
 }
 
 button {
   &.contactButton {
-  width: 272px;
-  height: 50px;
-  padding: 8px 15px;
+  width: 272px;    // Taille à définir
+  height: 50px;    // Taille à définir
+  padding: 8px 15px;  // Taille à définir
   background-color: var(--Gris-medium);
   border: none;
   font-family: Space Mono;
@@ -224,15 +244,15 @@ button {
 }
 
 .title-related-photos {
-  margin-bottom: 52px;
-  margin-top: 70px;
-  margin-left: 146px;
+  margin-bottom: 52px;   // Taille à définir
+  margin-top: 70px;      // Taille à définir
+  margin-left: 146px;    // Taille à définir
 }
 
 .container-photos { // les 2 photos associées
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 20px;         // Taille à définir
 }
 
 .contact-link {
@@ -243,8 +263,8 @@ button {
 
 .navigation-links {
   display: flex;
-  gap: 10px;
-}
+  gap: 10px;    // Taille à définir
+} 
 
 /* Footer */
 
@@ -252,9 +272,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  height: 40px;    // Taille à définir
   width: 100%;
-  margin-top: 130px;
+  margin-top: 130px;    // Taille à définir
   border-top: 1px solid #000;
   
   ul {
@@ -269,7 +289,7 @@ button {
       }
       
       .menu-item {
-          margin-right: 86px;
+          margin-right: 86px;      // Taille à définir
 
           &:last-child {
               margin-right: 0;
@@ -278,7 +298,7 @@ button {
   }
 
   p {
-      margin-left: 86px;
+      margin-left: 86px;    // Taille à définir
       font-family: Space Mono;
       font-size: 16px;
   }
@@ -299,8 +319,8 @@ button {
 
 .modal-content {
   position: relative;
-  width: 597px;
-  height: 769px;
+  width: 597px;     // Taille à définir
+  height: 769px;    // Taille à définir
   background-color: #fff;
   border: 1px solid #ccc;
   display: flex; 
@@ -309,9 +329,9 @@ button {
 }
 
 .popup-contact {
-  margin-left: 50px;
+  margin-left: 50px;   // Taille à définir
   h2 {
-    margin-bottom: 46px;
+    margin-bottom: 46px;   // Taille à définir
   }
 }
 /* Formulaire modale CF7 */
@@ -329,19 +349,19 @@ button {
 
 .wpcf7-form input[type="text"],
 .wpcf7-form input[type="email"] {
-  width: 263px;
-  height: 40px;
-  margin-bottom: 24px;
+  width: 263px;        // Taille à définir
+  height: 40px;         // Taille à définir
+  margin-bottom: 24px;   // Taille à définir
 }
 
 .wpcf7-form textarea {
-  width: 263px;
-  height: 210px;
+  width: 263px;    // Taille à définir
+  height: 210px;   // Taille à définir
   resize: none;
 }
 
 .wpcf7-form input[name="reference"] {
-  margin-bottom: 6px;
+  margin-bottom: 6px;       // Taille à définir
 }
 
 .wpcf7-submit {
@@ -349,17 +369,21 @@ button {
 }
 
 .wpcf7-form .last-element {
-  margin-bottom: 19px;
+  margin-bottom: 19px;         // Taille à définir
 }
 
 .wpcf7-form input[type="submit"] {
-  width: 263px;
-  height: 50px;
+  width: 263px;               // Taille à définir
+  height: 50px;                // Taille à définir
   background: var(--Gris-medium);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
   font-size: 12px;
   border-radius: 0;
 }
 
+// marge sup pages : à propos, vie privée et mentions légales
 
+div.entry-content {
+  margin-top: 100px;
+}
 
