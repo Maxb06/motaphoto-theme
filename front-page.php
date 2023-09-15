@@ -3,6 +3,9 @@
         <section>
             <div class="hero-header">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nathalie-11.jpeg" alt="Grande photo en-tête">
+                <div class="photo-event">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/photographe_event.png" alt="Photographe Event">
+                </div>
             </div>
         </section>
 
