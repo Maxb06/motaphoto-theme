@@ -115,6 +115,10 @@ header img {
 .hero-header {
   margin-bottom: 162px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .hero-header img {
@@ -124,12 +128,7 @@ header img {
 
 .photo-event {
   position: absolute;
-  top: 50%;
-  left: 0%;
-  margin-left: 220px;
-  margin-right: 227px;
   width: 55vw;
-  display: inline-block;
 }
 
 /* Page d'accueil */
