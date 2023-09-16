@@ -228,6 +228,11 @@ button.contactButton {
   justify-content: center;
   gap: 20px;
 }
+@media (max-width: 1024px) {
+  .container-photos {
+    flex-direction: column;
+  }
+}
 
 .contact-link {
   display: flex;
@@ -238,6 +243,11 @@ button.contactButton {
 .navigation-links {
   display: flex;
   gap: 10px;
+}
+
+.thumbnail-link img {
+  width: 81px;
+  height: 71px;
 }
 
 /* Footer */

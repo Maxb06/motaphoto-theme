@@ -243,6 +243,9 @@ button {
   display: flex;
   justify-content: center;
   gap: 20px;         // Taille à définir
+      @media (max-width: 1024px) {         // Responsive 2 photos bas de page
+        flex-direction : column;
+      }
 }
 
 .contact-link {
@@ -255,6 +258,17 @@ button {
   display: flex;
   gap: 10px;    // Taille à définir
 } 
+
+.thumbnail-link {
+  //border: 2px solid red;
+  
+  //object-fit: contain;
+  //box-sizing: border-box;
+    img {
+      width: 81px;
+      height: 71px;
+    }
+}
 
 /* Footer */
 
