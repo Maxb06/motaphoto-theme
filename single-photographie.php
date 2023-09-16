@@ -45,9 +45,9 @@ while ( have_posts() ) :
     			</div>
 				<div class="thumbnail-link">
 					<?php                           // Vignette miniature
-					if ( has_post_thumbnail() ) {
-					the_post_thumbnail('thumbnail');
-					} 
+						if ( has_post_thumbnail() ) {
+						the_post_thumbnail('thumbnail');
+						}
 					?>
 				</div>
 			</div>
