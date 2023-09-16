@@ -43,6 +43,13 @@ while ( have_posts() ) :
     			<div class="next">
       				<?php previous_post_link('%link', '<img src="' . get_template_directory_uri() . '/assets/images/line7.png" alt="Photo suivante">', TRUE, ' ', 'categorie-photo'); ?>
     			</div>
+				<div class="thumbnail-link">
+					<?php                           // Vignette miniature
+					if ( has_post_thumbnail() ) {
+					the_post_thumbnail('thumbnail');
+					} 
+					?>
+				</div>
 			</div>
 		</div>
 		
