@@ -105,12 +105,6 @@ p {
   font-size: 16px;
 }
 
-header img {
-  width: 100%;
-  height: auto;
-  max-height: 966px;
-}
-
 /* Hero Header */
 .hero-header {
   margin-bottom: 162px;
