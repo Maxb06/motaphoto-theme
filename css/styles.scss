@@ -115,6 +115,12 @@ p {
     }
   }
 
+// marge sup pages : à propos, vie privée et mentions légales
+
+div.entry-content {
+  margin-top: 100px;
+}
+
 /* Hero Header */
 
 .hero-header {
@@ -292,44 +298,6 @@ button {
       }
 }
 
-/* Footer */
-
-.footer-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;    // Taille à définir
-  width: 100%;
-  margin-top: 130px;    // Taille à définir
-  border-top: 1px solid #000;
-  
-  ul {
-      display: flex;
-      list-style-type: none;
-
-      a {
-          text-decoration: none;
-          color: var(--noir-100);
-          font-family: Space Mono;
-          font-size: 16px;
-      }
-      
-      .menu-item {
-          margin-right: 86px;      // Taille à définir
-
-          &:last-child {
-              margin-right: 0;
-          }
-      }
-  }
-
-  p {
-      margin-left: 86px;    // Taille à définir
-      font-family: Space Mono;
-      font-size: 16px;
-  }
-}
-
 /* Modale Contact */
 
 #contactModal {
@@ -418,9 +386,43 @@ button {
   border-radius: 0;
 }
 
-// marge sup pages : à propos, vie privée et mentions légales
+/* Footer */
 
-div.entry-content {
-  margin-top: 100px;
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;    // Taille à définir
+  width: 100%;
+  margin-top: 130px;    // Taille à définir
+  border-top: 1px solid #000;
+  
+  ul {
+      display: flex;
+      list-style-type: none;
+
+      a {
+          text-decoration: none;
+          color: var(--noir-100);
+          font-family: Space Mono;
+          font-size: 16px;
+      }
+      
+      .menu-item {
+          margin-right: 86px;      // Taille à définir
+
+          &:last-child {
+              margin-right: 0;
+          }
+      }
+  }
+
+  p {
+      margin-left: 86px;    // Taille à définir
+      font-family: Space Mono;
+      font-size: 16px;
+  }
 }
+
+
 
