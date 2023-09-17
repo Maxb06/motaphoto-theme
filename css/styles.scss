@@ -353,15 +353,26 @@ button {
   display: flex; 
   justify-content: center;  
   align-items: center; 
+  border: 5px solid var(--noir-100);
 }
 
 .popup-contact {
-  margin-left: 50px;   // Taille à définir
+  //margin-left: 50px;   // Taille à définir
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   h2 {
-    margin-bottom: 46px;   // Taille à définir
+    margin-top: 25px;   // Taille à définir
+    margin-bottom: 30px;
   }
 }
-/* Formulaire modale CF7 */
+
+.wpcf7-spinner {   
+  display: none;
+}
+
+/* Formulaire modale page photo */
 
 .wpcf7-form label {
   font-size: 12px;
@@ -378,7 +389,7 @@ button {
 .wpcf7-form input[type="email"] {
   width: 263px;        // Taille à définir
   height: 40px;         // Taille à définir
-  margin-bottom: 24px;   // Taille à définir
+  margin-bottom: 20px;   // Taille à définir
 }
 
 .wpcf7-form textarea {

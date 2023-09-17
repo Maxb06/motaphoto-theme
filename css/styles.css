@@ -329,16 +329,25 @@ button.contactButton {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 5px solid var(--noir-100);
 }
 
 .popup-contact {
-  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .popup-contact h2 {
-  margin-bottom: 46px;
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
 
-/* Formulaire modale CF7 */
+.wpcf7-spinner {
+  display: none;
+}
+
+/* Formulaire modale page photo */
 .wpcf7-form label {
   font-size: 12px;
   font-weight: 500;
@@ -354,7 +363,7 @@ button.contactButton {
 .wpcf7-form input[type=email] {
   width: 263px;
   height: 40px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .wpcf7-form textarea {
