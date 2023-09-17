@@ -237,9 +237,8 @@ p {
 
 .navigation-links {
   display: flex;
-  gap: 10px;
+  gap: 30px;
   justify-content: flex-end;
-  margin-right: 7px;
   margin-top: 7px;
 }
 
