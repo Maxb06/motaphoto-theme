@@ -39,17 +39,17 @@ jQuery(document).ready(function($) {
   });
 });
 
-/* Affichage miniature au survol flèches nav page photo */
+/* Affichage miniature img au survol flèches nav page photo */
 
 jQuery(document).ready(function($) {
     $(".previous a, .next a").hover(
         function() {
             var thumbnailUrl = $(this).data("thumbnail");
-            // Ajouter l'image miniature au DOM
+            // Ajout la miniature img au DOM
             $(this).append('<img class="hover-thumbnail" src="' + thumbnailUrl + '" />');
         },
         function() {
-            // Retirer l'image miniature du DOM
+            // Retirer miniature img du DOM
             $(this).find(".hover-thumbnail").remove();
         }
     );
