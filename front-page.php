@@ -1,8 +1,25 @@
 <?php get_header(); ?>
 
+        <?php 
+        // Récupèration de toutes les photos
+        $args = array(
+            'post_type' => 'photographie',
+            'posts_per_page' => -1,  // -1 pour tous les posts
+        );
+
+        $all_photos = new WP_Query($args);
+
+        // Sélectionne une photo aléatoire
+        if ($all_photos->have_posts()):
+            $random_key = array_rand($all_photos->posts, 1);
+            $random_photo = $all_photos->posts[$random_key];
+            $photo_url = get_the_post_thumbnail_url($random_photo->ID, 'full');
+        endif;
+        ?>
+
         <section>
-            <div class="hero-header">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nathalie-11.jpeg" alt="Grande photo en-tête">
+            <div class="hero-header" style="background-image: url('<?php echo $photo_url ?>');">
+                
                 <div class="photo-event">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/photographe_event.png" alt="Photographe Event">
                 </div>
