@@ -31,7 +31,7 @@
             <?php  // Tableau requête wp_query nombre de posts par page 
                 $args = array(
                     'post_type' => 'photographie',
-                    'posts_per_page' => 16, 
+                    'posts_per_page' => 8, 
                 );
                 $the_query = new WP_Query( $args ); 
             ?>
