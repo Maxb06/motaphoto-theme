@@ -51,6 +51,7 @@
                 <p><?php _e( 'Désolé, aucune photo n\'a été trouvée.' ); ?></p>
             <?php endif; ?>
 
+            <button id="load-more-button">Charger plus</button>
         </section>
 
 <?php get_footer(); ?>
