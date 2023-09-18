@@ -41,17 +41,23 @@ while ( have_posts() ) :
 			<div class="bottom-column-right">
 				
 				<div class="navigation-links"> <!-- Flèches navigations -->
+					
 					<div class="previous">
 						<?php 
 							$previous_post = get_adjacent_post(true, '', true, 'categorie-photo');
 							if($previous_post) {
 								$previous_post_id = $previous_post->ID;
 								$thumbnail_url = get_the_post_thumbnail_url($previous_post_id, 'thumbnail');
+								?>
+								<a href="<?php echo get_permalink($previous_post->ID); ?>" data-thumbnail="<?php echo $thumbnail_url; ?>">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/line6.png" alt="Photo précédente">
+								</a>
+								<?php
+							} else {
+								// Quand pas de post précédent
+								echo "Ø";
 							}
 						?>
-						<a href="<?php echo get_permalink($previous_post->ID); ?>" data-thumbnail="<?php echo $thumbnail_url; ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/line6.png" alt="Photo précédente">
-						</a>
 					</div>
 
 					<div class="next">
@@ -60,11 +66,16 @@ while ( have_posts() ) :
 							if($next_post) {
 								$next_post_id = $next_post->ID;
 								$thumbnail_url = get_the_post_thumbnail_url($next_post_id, 'thumbnail');
+								?>
+								<a href="<?php echo get_permalink($next_post->ID); ?>" data-thumbnail="<?php echo $thumbnail_url; ?>">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/line7.png" alt="Photo suivante">
+								</a>
+								<?php
+							} else {
+								// Quand pas de post suivant
+								echo "Ø";
 							}
 						?>
-						<a href="<?php echo get_permalink($next_post->ID); ?>" data-thumbnail="<?php echo $thumbnail_url; ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/line7.png" alt="Photo suivante">
-						</a>
 					</div>
 
 				</div>
