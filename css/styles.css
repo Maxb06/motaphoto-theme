@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --Rouge: #E00000;
   --Rouge-secondaire: #FE5858;
@@ -111,17 +112,15 @@ div.entry-content {
 
 /* Hero Header */
 .hero-header {
-  margin-bottom: 162px;
+  margin-bottom: 162px; /* Taille à définir */
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-}
-
-.hero-header img {
-  width: 100%;
-  height: auto;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  max-width: 1440px;
 }
 
 .photo-event {
@@ -155,6 +154,7 @@ div.entry-content {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  box-sizing: border-box;
 }
 
 /* Page photographie */
