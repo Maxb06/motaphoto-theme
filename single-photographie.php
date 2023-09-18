@@ -39,20 +39,34 @@ while ( have_posts() ) :
 				</div>
 			</div>	
 			<div class="bottom-column-right">
-				<div class="thumbnail-link">
-					<?php                           // Vignette miniature
-						if ( has_post_thumbnail() ) {
-						the_post_thumbnail('thumbnail');
-						}
-					?>
-				</div>		
+				
 				<div class="navigation-links"> <!-- Flèches navigations -->
 					<div class="previous">
-						<?php next_post_link('%link', '<img src="' . get_template_directory_uri() . '/assets/images/line6.png" alt="Photo précédente">', TRUE, ' ', 'categorie-photo'); ?>
+						<?php 
+							$previous_post = get_adjacent_post(true, '', true, 'categorie-photo');
+							if($previous_post) {
+								$previous_post_id = $previous_post->ID;
+								$thumbnail_url = get_the_post_thumbnail_url($previous_post_id, 'thumbnail');
+							}
+						?>
+						<a href="<?php echo get_permalink($previous_post->ID); ?>" data-thumbnail="<?php echo $thumbnail_url; ?>">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/line6.png" alt="Photo précédente">
+						</a>
 					</div>
+
 					<div class="next">
-						<?php previous_post_link('%link', '<img src="' . get_template_directory_uri() . '/assets/images/line7.png" alt="Photo suivante">', TRUE, ' ', 'categorie-photo'); ?>
-					</div>	
+						<?php 
+							$next_post = get_adjacent_post(true, '', false, 'categorie-photo');
+							if($next_post) {
+								$next_post_id = $next_post->ID;
+								$thumbnail_url = get_the_post_thumbnail_url($next_post_id, 'thumbnail');
+							}
+						?>
+						<a href="<?php echo get_permalink($next_post->ID); ?>" data-thumbnail="<?php echo $thumbnail_url; ?>">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/line7.png" alt="Photo suivante">
+						</a>
+					</div>
+
 				</div>
 			</div>
 		</div>
