@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
   $('#load-more-button').on('click', function() {
     page++; // incrémenter le numéro de page
     $.ajax({
-      url: `https://motaphoto.local/wp-json/wp/v2/photographie?page=${page}&per_page=12`, // adapter l'URL à votre API
+      url: `https://motaphoto.local/wp-json/wp/v2/photographie?page=${page}&per_page=12`,
       method: 'GET',
       success: function(data) {
         data.forEach(function(post) {
