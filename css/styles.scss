@@ -142,20 +142,12 @@ div.entry-content {
 
 /* Page d'accueil */
 
-.photo-catalog {
+#photo-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 162px;   // Taille à définir
   margin-right: 146px;
   margin-left: 146px;
-  margin-bottom: 130px;
-  //max-width: 1440px;  // max-width et width à verifier
-  //width: 100%;         // max-width et width à verifier
-  //height: auto;       // Voir si conserver
-    @media (max-width: 1024px) {  // responsive @media 
-      flex-direction : column;    
-    }
 }
 
 .photo-item {
@@ -169,6 +161,30 @@ div.entry-content {
     object-fit: cover;
     box-sizing: border-box;
   }
+}
+
+/* BTN 'Charger plus' page d'accueil */
+
+.home-btn {
+  display: flex;
+  justify-content: center;
+}
+
+#load-more-button {
+  margin-top: 25px;
+  margin-bottom: 40px;
+  width: 272px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #D8D8D8;
+  font-size: 12px;
+  font-family: 'Space Mono';
+  border-radius: 2px;
+  border: none;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
 }
 
 /* Page photographie */
@@ -275,7 +291,7 @@ div.entry-content {
 } 
 /*
 .container-bottom {             // Conteneur des 2 photos annexes
-  //border: 3px solid blueviolet;
+  border: 3px solid blueviolet;
 }
 */
 button {
@@ -402,7 +418,7 @@ button {
   align-items: center;
   height: 40px;    // Taille à définir
   width: 100%;
-  margin-top: 130px;    // Taille à définir
+  //margin-top: 130px;    // Taille à définir
   border-top: 1px solid #000;
   
   ul {
