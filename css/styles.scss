@@ -208,8 +208,8 @@ div.entry-content {
   width: 50%;     /* Taille à définir */
   border-bottom: 1px solid black;
   margin-left: 146px;   /* Taille à définir */
-  margin-right: 20px;   /* Taille à définir */
-  padding-bottom: 30px;   /* Taille à définir */
+  margin-right: 10px;
+  padding-bottom: 35px;   /* Taille à définir */
     p {
     font-family: Space Mono;
     font-size: 14px;
@@ -219,6 +219,7 @@ div.entry-content {
   }
     h2 {
       width: 20vw;
+      margin-bottom: 30px;
     }
 }
 
@@ -231,9 +232,9 @@ div.entry-content {
 .right-column {
   width: 50%;
   margin-right: 146px;   /* Taille à définir */
-  margin-left: 20px;     /* Taille à définir */
+  margin-left: 10px;     /* Taille à définir */
   img {
-    width: 31vw;
+    width: 30vw;
     height: 100vh;
     object-fit: cover;
     //background-size: cover;
@@ -244,8 +245,6 @@ div.entry-content {
 .bottom-column {
   margin-left: 146px;   /* Taille à définir */
   margin-right: 146px;  /* Taille à définir */
-  //margin-top: 45px;     /* Taille à définir */
-  //padding-bottom: 45px; /* Taille à définir */
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
@@ -253,7 +252,7 @@ div.entry-content {
 }
 
 .bottom-column-left {
-  width: 48.5%;
+  width: 48.4%;
   display: flex;
   align-items: center;
 }
@@ -277,12 +276,13 @@ div.entry-content {
 
 .hover-thumbnail {  // Miniature photo
   position: absolute;
-  width: 81px;
+  width: 80px;
   height: auto;
   bottom: 100%;  
   left: 50%;  
   transform: translateX(-50%); 
-  margin-bottom: 5px;
+  //margin-bottom: 2px;
+  object-fit: contain;
 }
 
 .navigation-links {
@@ -290,17 +290,13 @@ div.entry-content {
   gap: 30px;    // Taille à définir
   justify-content: flex-end;
   align-items:last baseline;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   position: absolute;
     bottom: 0;
     right: 0
 } 
-/*
-.container-bottom {             // Conteneur des 2 photos annexes
-  border: 3px solid blueviolet;
-}
-*/
+
 button {
   &.contactButton {
   width: 272px;    // Taille à définir
@@ -311,6 +307,10 @@ button {
   font-family: Space Mono;
   font-size: 12px;
   cursor: pointer;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
   }
 }
 
@@ -362,7 +362,6 @@ button {
 }
 
 .popup-contact {
-  //margin-left: 50px;   // Taille à définir
   display: flex;
   flex-direction: column;
   align-items: center;
