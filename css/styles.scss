@@ -152,7 +152,7 @@ div.entry-content {
 }
 
 .photo-item {
-  flex-basis: calc(50% - 10px);
+  //flex-basis: calc(50% - 10px);
   margin-bottom: 20px;
   width: 564px;   /* Taille à définir */
   height: 495px;    /* Taille à définir */
@@ -160,7 +160,9 @@ div.entry-content {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    box-sizing: border-box;
+    //box-sizing: border-box;
+    //background-size: cover;
+    //background-position: center;
   }
 }
 
@@ -195,6 +197,9 @@ div.entry-content {
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 38px;   /* Taille à définir */
+    @media (max-width: 1024px) {         // Responsive page photo
+      flex-direction : column-reverse;
+    }
 }
 
 .left-column {
@@ -204,7 +209,7 @@ div.entry-content {
   border-bottom: 1px solid black;
   margin-left: 146px;   /* Taille à définir */
   margin-right: 20px;   /* Taille à définir */
-  padding-bottom: 37px;   /* Taille à définir */
+  padding-bottom: 30px;   /* Taille à définir */
     p {
     font-family: Space Mono;
     font-size: 14px;
@@ -228,9 +233,11 @@ div.entry-content {
   margin-right: 146px;   /* Taille à définir */
   margin-left: 20px;     /* Taille à définir */
   img {
-    max-width: 100%;
-    height: auto;
+    width: 31vw;
+    height: 100vh;
     object-fit: cover;
+    //background-size: cover;
+    //background-position: center;
   }
 }
 
@@ -278,7 +285,6 @@ div.entry-content {
   margin-bottom: 5px;
 }
 
-
 .navigation-links {
   display: flex;
   gap: 30px;    // Taille à définir
@@ -321,6 +327,13 @@ button {
       @media (max-width: 1024px) {         // Responsive 2 photos bas de page
         flex-direction : column;
       }
+}
+
+.related-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 /* Modale Contact */
