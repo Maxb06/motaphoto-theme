@@ -106,6 +106,7 @@ p {
   font-size: 16px;
 }
 
+/* marge sup pages : à propos, vie privée et mentions légales */
 div.entry-content {
   margin-top: 100px;
 }
@@ -120,6 +121,8 @@ div.entry-content {
   max-width: 1440px;
   width: 100vw;
   height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 
 .photo-event {
@@ -139,8 +142,8 @@ div.entry-content {
 .photo-item {
   flex-basis: calc(50% - 10px);
   margin-bottom: 20px;
-  width: 564px;
-  height: 495px;
+  width: 564px; /* Taille à définir */
+  height: 495px; /* Taille à définir */
 }
 .photo-item img {
   width: 100%;
@@ -177,17 +180,17 @@ div.entry-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 38px;
+  margin-top: 38px; /* Taille à définir */
 }
 
 .left-column {
-  width: 420px;
-  height: auto;
-  width: 50%;
+  width: 420px; /* Taille à définir */
+  height: auto; /* Taille à définir */
+  width: 50%; /* Taille à définir */
   border-bottom: 1px solid black;
-  margin-left: 146px;
-  margin-right: 20px;
-  padding-bottom: 37px;
+  margin-left: 146px; /* Taille à définir */
+  margin-right: 20px; /* Taille à définir */
+  padding-bottom: 37px; /* Taille à définir */
 }
 .left-column p {
   font-family: Space Mono;
@@ -208,8 +211,8 @@ div.entry-content {
 
 .right-column {
   width: 50%;
-  margin-right: 146px;
-  margin-left: 20px;
+  margin-right: 146px; /* Taille à définir */
+  margin-left: 20px; /* Taille à définir */
 }
 .right-column img {
   max-width: 100%;
@@ -218,8 +221,8 @@ div.entry-content {
 }
 
 .bottom-column {
-  margin-left: 146px;
-  margin-right: 146px;
+  margin-left: 146px; /* Taille à définir */
+  margin-right: 146px; /* Taille à définir */
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
