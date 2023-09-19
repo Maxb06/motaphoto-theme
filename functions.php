@@ -9,6 +9,8 @@ add_action( 'wp_enqueue_scripts', 'motaphoto_enqueue_styles' );
 
 function enqueue_my_scripts() {
   wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0', true );
+  wp_enqueue_script( 'load-more', get_template_directory_uri() . '/js/load-more.js', array('jquery'), '1.0', true );
+
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_my_scripts' );
 
