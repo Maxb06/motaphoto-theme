@@ -120,6 +120,9 @@ while ( have_posts() ) :
 					<?php endif; ?>
 				</div>
 			</div>
+			<div class="related-btn">
+                <button id="load-more-button">Toutes les photos</button>
+            </div>
 		</div>					
 	</div>
 
