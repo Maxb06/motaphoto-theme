@@ -27,31 +27,33 @@
         </section>
 
         <section class="photo-catalog">
-            
-            <?php  // Tableau requête wp_query nombre de posts par page 
-                $args = array(
-                    'post_type' => 'photographie',
-                    'posts_per_page' => 12, 
-                );
-                $the_query = new WP_Query( $args ); 
-            ?>
+            <div id="photo-container">
+                <?php  // Tableau requête wp_query nombre de posts par page 
+                    $args = array(
+                        'post_type' => 'photographie',
+                        'posts_per_page' => 12          
+                    );
+                    $the_query = new WP_Query( $args ); 
+                ?>
 
-            <?php if ( $the_query->have_posts() ) : ?>
+                <?php if ( $the_query->have_posts() ) : ?>
 
-            <!-- Boucle requête perso -->
-            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                
-            <?php get_template_part('template-parts/photo-block'); ?><!--Inclusion template partiel bloc photo-->
+                <!-- Boucle requête perso -->
+                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                    
+                <?php get_template_part('template-parts/photo-block'); ?><!--Inclusion template partiel bloc photo-->
 
-            <!-- fin de la boucle -->
-                <?php endwhile; ?> 
-                <?php wp_reset_postdata(); ?>
+                <!-- fin de la boucle -->
+                    <?php endwhile; ?> 
+                    <?php wp_reset_postdata(); ?>
 
-            <?php else : ?> 
-                <p><?php _e( 'Désolé, aucune photo n\'a été trouvée.' ); ?></p>
-            <?php endif; ?>
-
-            <button id="load-more-button">Charger plus</button>
+                <?php else : ?> 
+                    <p><?php _e( 'Désolé, aucune photo n\'a été trouvée.' ); ?></p>
+                <?php endif; ?>
+            </div>
+            <div class="home-btn">
+                <button id="load-more-button">Charger plus</button>
+            </div>
         </section>
 
 <?php get_footer(); ?>
