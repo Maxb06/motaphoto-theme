@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
       url += `&format-photo=${format}`;
     }
 
-    if (sort) {
+    if (sort && sort !== "none") {
       if (sort === 'asc' || sort === 'desc') {
           url += `&orderby=date&order=${sort}`;
       } else {
