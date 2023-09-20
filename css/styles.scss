@@ -124,7 +124,7 @@ div.entry-content {
 /* Hero Header */
 
 .hero-header {
-  margin-bottom: 162px;        /* Taille à définir */
+  margin-bottom: 80px;        /* Taille à définir */
   position: relative;
   display: flex;
   justify-content: center;
@@ -149,6 +149,62 @@ div.entry-content {
   justify-content: space-between;
   margin-right: 146px;
   margin-left: 146px;
+}
+
+//Sélecteurs filtres
+
+.photo-filters {
+  //border: 3px solid blue;
+  height: 82px;
+  margin-right: 146px;
+  margin-left: 146px;
+  display: flex;
+  justify-content: space-between;
+
+    #filter-category {
+      width: 260px;
+      height: 43px;
+      font-family: poppins;
+      font-weight: 500;
+      font-size: 12px;
+      border-radius: 8px;
+      border: 1.3px solid #B8BBC2;
+      display: flex;
+      
+  }
+    #filter-format{
+      width: 260px;
+      height: 43px;
+      font-family: poppins;
+      font-weight: 500;
+      font-size: 12px;
+      border-radius: 8px;
+      border: 1.3px solid #B8BBC2;
+  }
+    #sort-date {
+      width: 260px;
+      height: 43px;
+      font-family: poppins;
+      font-weight: 500;
+      font-size: 12px;
+      border-radius: 8px;
+      border: 1.3px solid #B8BBC2;
+  }
+}
+    
+
+.filters-left {
+  //border: 2px solid red;
+  width: 49%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-right {
+  //border: 2px solid green;
+  width: 49%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .photo-item {
