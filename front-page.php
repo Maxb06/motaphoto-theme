@@ -18,8 +18,7 @@
         ?>
 
         <section>
-            <div class="hero-header" style="background-image: url('<?php echo $photo_url ?>');">
-                
+            <div class="hero-header" style="background-image: url('<?php echo $photo_url ?>');"> 
                 <div class="photo-event">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/photographe_event.png" alt="Photographe Event">
                 </div>
