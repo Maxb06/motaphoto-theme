@@ -29,9 +29,11 @@
         <section class="photo-catalog">
             <div class="photo-filters">
                 <select id="filter-category">
+                    <option value="all">Toutes les photos</option>
                     <!-- Options chargées dynamiquement -->
                 </select>
                 <select id="filter-format">
+                    <option value="all">Tous les formats</option>
                     <!-- Options chargées dynamiquement -->
                 </select>
                 <select id="sort-date">
