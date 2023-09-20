@@ -1,10 +1,28 @@
 let page = 1; // initialisation de la variable page
 
 jQuery(document).ready(function($) {
-  $('#load-more-button').on('click', function() {
-    page++; // incrémenter le numéro de page
+  
+  function loadPhotos(page, category = null, format = null, sort = null) {
+    let url = `https://motaphoto.local/wp-json/wp/v2/photographie?page=${page}&per_page=12`;
+    
+    if (category && category !== 'all') {
+      url += `&categorie-photo=${category}`;
+    }
+
+    if (format && format !== "all") {
+      url += `&format-photo=${format}`;
+    }
+
+    if (sort) {
+      if (sort === 'asc' || sort === 'desc') {
+          url += `&orderby=date&order=${sort}`;
+      } else {
+          url += `&order=${sort}`;
+      }
+    }
+    
     $.ajax({
-      url: `https://motaphoto.local/wp-json/wp/v2/photographie?page=${page}&per_page=12`,
+      url: url,
       method: 'GET',
       success: function(data) {
         data.forEach(function(post) {
@@ -22,5 +40,24 @@ jQuery(document).ready(function($) {
         console.log('Erreur :', err);
       }
     });
+  }
+
+  $('#load-more-button').on('click', function() {
+    const selectedCategory = $('#filter-category').val();
+    const selectedFormat = $('#filter-format').val();
+    const selectedSort = $('#sort-date').val();
+    
+    page++; // incrémenter le numéro de page
+    loadPhotos(page, selectedCategory, selectedFormat, selectedSort);
+  });
+
+  $('#filter-category, #filter-format, #sort-date').on('change', function() {
+    $('#photo-container').empty();
+    page = 1; // réinitialisation du numéro de page
+    const selectedCategory = $('#filter-category').val();
+    const selectedFormat = $('#filter-format').val();
+    const selectedSort = $('#sort-date').val();
+    
+    loadPhotos(page, selectedCategory, selectedFormat, selectedSort);
   });
 });
