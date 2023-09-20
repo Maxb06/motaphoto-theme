@@ -55,4 +55,23 @@ jQuery(document).ready(function($) {
     );
 });
 
+/* Chargement dynamique des options de filtres */
+
+jQuery(document).ready(function($) {
+  // Chargement dynamique des catégories
+  $.get('/wp-json/wp/v2/categorie-photo', function(data) {
+      const selectCategory = $('#filter-category');
+      data.forEach(function(category) {
+          selectCategory.append(`<option value="${category.id}">${category.name}</option>`);
+      });
+  });
+
+  // Chargement dynamique des formats
+  $.get('/wp-json/wp/v2/format-photo', function(data) {
+      const selectFormat = $('#filter-format');
+      data.forEach(function(format) {
+          selectFormat.append(`<option value="${format.id}">${format.name}</option>`);
+      });
+  });
+});
 
