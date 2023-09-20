@@ -60,7 +60,7 @@
                     <?php wp_reset_postdata(); ?>
 
                 <?php else : ?> 
-                    <p><?php _e( 'Désolé, aucune photo n\'a été trouvée.' ); ?></p>
+                    <p><?php _e( 'De nouvelles photos seront ajoutées prochainement 📷' ); ?></p>
                 <?php endif; ?>
             </div>
             <div class="home-btn">
