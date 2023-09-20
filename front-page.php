@@ -28,18 +28,23 @@
 
         <section class="photo-catalog">
             <div class="photo-filters">
-                <select id="filter-category">
-                    <option value="all">Toutes les photos</option>
-                    <!-- Options chargées dynamiquement -->
-                </select>
-                <select id="filter-format">
-                    <option value="all">Tous les formats</option>
-                    <!-- Options chargées dynamiquement -->
-                </select>
-                <select id="sort-date">
-                    <option value="desc">Plus récentes</option>
-                    <option value="asc">Plus anciennes</option>
-                </select>
+                <div class="filters-left">
+                    <select id="filter-category">
+                        <option value="all">CATÉGORIES</option>
+                        <!-- Options chargées dynamiquement -->
+                    </select>
+                    <select id="filter-format">
+                        <option value="all">FORMATS</option>
+                        <!-- Options chargées dynamiquement -->
+                    </select>
+                </div>
+                <div class="filter-right">
+                    <select id="sort-date">
+                        <option value="none">TRIER PAR</option>
+                        <option value="desc">Plus récentes</option>
+                        <option value="asc">Plus anciennes</option>
+                    </select>
+                </div>
             </div>
             <div id="photo-container">
                 <?php  // Tableau requête wp_query nombre de posts par page 
