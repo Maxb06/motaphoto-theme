@@ -27,6 +27,18 @@
         </section>
 
         <section class="photo-catalog">
+            <div class="photo-filters">
+                <select id="filter-category">
+                    <!-- Options chargées dynamiquement -->
+                </select>
+                <select id="filter-format">
+                    <!-- Options chargées dynamiquement -->
+                </select>
+                <select id="sort-date">
+                    <option value="desc">Plus récentes</option>
+                    <option value="asc">Plus anciennes</option>
+                </select>
+            </div>
             <div id="photo-container">
                 <?php  // Tableau requête wp_query nombre de posts par page 
                     $args = array(
