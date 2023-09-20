@@ -160,39 +160,38 @@ div.entry-content {
   margin-left: 146px;
   display: flex;
   justify-content: space-between;
-
     #filter-category {
       width: 260px;
       height: 43px;
-      font-family: poppins;
+      font-family: 'poppins', monospace;
       font-weight: 500;
       font-size: 12px;
       border-radius: 8px;
-      border: 1.3px solid #B8BBC2;
-      display: flex;
-      
+      border: 1.3px solid #B8BBC2;  
+      padding-left: 18px;  
   }
     #filter-format{
       width: 260px;
       height: 43px;
-      font-family: poppins;
+      font-family: 'poppins', monospace;
       font-weight: 500;
       font-size: 12px;
       border-radius: 8px;
       border: 1.3px solid #B8BBC2;
+      padding-left: 18px;
   }
     #sort-date {
       width: 260px;
       height: 43px;
-      font-family: poppins;
+      font-family: 'poppins', monospace;
       font-weight: 500;
       font-size: 12px;
       border-radius: 8px;
       border: 1.3px solid #B8BBC2;
+      padding-left: 18px;
   }
 }
-    
-
+ 
 .filters-left {
   //border: 2px solid red;
   width: 49%;
@@ -349,8 +348,8 @@ div.entry-content {
   margin-top: 10px;
   margin-bottom: 10px;
   position: absolute;
-    bottom: 0;
-    right: 0
+  bottom: 0;
+  right: 0
 } 
 
 button {
@@ -390,6 +389,11 @@ button {
   justify-content: center;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+
+.next,
+.previous {
+  color: #51515d;
 }
 
 /* Modale Contact */
