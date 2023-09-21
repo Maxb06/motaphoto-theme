@@ -61,3 +61,25 @@ jQuery(document).ready(function($) {
     loadPhotos(page, selectedCategory, selectedFormat, selectedSort);
   });
 });
+
+/* 
+//load More
+jQuery(document).ready(function($) {
+    let page = 1; // Puisque WordPress commence avec 1
+
+    $("#load-more-button").on("click", function() {
+        page++;
+        $.ajax({
+            url: load_more_params.ajax_url,
+            type: 'post',
+            data: {
+                action: 'load_more',
+                page: page
+            },
+            success: function(response) {
+                $(".photo-catalog").append(response);
+            }
+        });
+    });
+});
+*/
