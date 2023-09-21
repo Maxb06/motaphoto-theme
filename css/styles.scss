@@ -53,8 +53,7 @@ h3 {
   color: var(--noir-100);
 }
 
-/*
-.description-photo {
+.description-photo { // Styles pour pages photo description
   font-family: 'Space Mono', monospace;
   font-size: 14px;
   font-style: normal;
@@ -64,7 +63,6 @@ h3 {
   text-transform: uppercase;
   color: var(--noir-100);
 }
-*/
 
 /* Styles pour Poppins */
 p {
@@ -86,9 +84,9 @@ p {
     height: 80px;
     box-shadow: 0px 14px 10px -2px rgba(0, 0, 0, 0.03);
     img {
-      width: 216px;           // Taille à définir
-      height: 14px;              // Taille à définir
-      margin-left: 146px;          // Taille à définir
+      width: 216px;     
+      height: auto;              
+      margin-left: 9.125rem; 
     }
 
     nav {
@@ -99,10 +97,10 @@ p {
         display: flex;
   
         li {
-          margin-right: 45px;           // Taille à définir
+          margin-right: 2.8125rem;           
   
           &:last-child {
-            margin-right: 146px;      // Taille à définir
+            margin-right: 9.125rem;     
           }
   
           a {
@@ -125,7 +123,7 @@ div.entry-content {
 /* Hero Header */
 
 .hero-header {
-  margin-bottom: 80px;        /* Taille à définir */
+  margin-bottom: 80px;   
   position: relative;
   display: flex;
   justify-content: center;
@@ -153,10 +151,9 @@ div.entry-content {
   margin-left: 146px;
 }
 
-//Sélecteurs filtres
+/* filtres page accueil */
 
 .photo-filters {
-  //border: 3px solid blue;
   height: 82px;
   margin-right: 146px;
   margin-left: 146px;
@@ -195,14 +192,12 @@ div.entry-content {
 }
  
 .filters-left {
-  //border: 2px solid red;
   width: 49%;
   display: flex;
   justify-content: space-between;
 }
 
 .filter-right {
-  //border: 2px solid green;
   width: 49%;
   display: flex;
   justify-content: flex-end;
@@ -217,9 +212,6 @@ div.entry-content {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    //box-sizing: border-box;
-    //background-size: cover;
-    //background-position: center;
   }
 }
 
@@ -261,12 +253,12 @@ div.entry-content {
 
 .left-column {
   width: 420px;   /* Taille à définir */
-  height: auto;   /* Taille à définir */
+  height: auto;   
   width: 50%;     /* Taille à définir */
   border-bottom: 1px solid black;
   margin-left: 146px;   /* Taille à définir */
   margin-right: 10px;
-  padding-bottom: 35px;   /* Taille à définir */
+  padding-bottom: 35px;  
     p {
     font-family: Space Mono;
     font-size: 14px;
@@ -294,8 +286,6 @@ div.entry-content {
     width: 30vw;
     height: 100vh;
     object-fit: cover;
-    //background-size: cover;
-    //background-position: center;
   }
 }
 
@@ -314,7 +304,8 @@ div.entry-content {
   align-items: center;
 }
 
-.contact-link {     // bouton contact
+/* bouton contact page photo */
+.contact-link {     
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -331,20 +322,20 @@ div.entry-content {
   position: relative;
 }
 
-.hover-thumbnail {  // Miniature photo
+/* Miniature photo */
+.hover-thumbnail {  
   position: absolute;
   width: 80px;
   height: auto;
   bottom: 100%;  
   left: 50%;  
   transform: translateX(-50%); 
-  //margin-bottom: 2px;
   object-fit: contain;
 }
 
 .navigation-links {
   display: flex;
-  gap: 30px;    // Taille à définir
+  gap: 30px;  
   justify-content: flex-end;
   align-items:last baseline;
   padding-top: 5px;
@@ -377,10 +368,11 @@ button {
   margin-left: 146px;    // Taille à définir
 }
 
-.container-photos { // les 2 photos associées
+/* les 2 photos associées */
+.container-photos { 
   display: flex;
   justify-content: center;
-  gap: 20px;         // Taille à définir
+  gap: 20px;         
       @media (max-width: 1024px) {         // Responsive 2 photos bas de page
         flex-direction : column;
       }
@@ -429,7 +421,7 @@ button {
   align-items: center;
   justify-content: center;
   h2 {
-    margin-top: 25px;   // Taille à définir
+    margin-top: 25px; 
     margin-bottom: 30px;
   }
 }
@@ -465,7 +457,7 @@ button {
 }
 
 .wpcf7-form input[name="reference"] {
-  margin-bottom: 6px;       // Taille à définir
+  margin-bottom: 6px;       
 }
 
 .wpcf7-submit {
@@ -473,7 +465,7 @@ button {
 }
 
 .wpcf7-form .last-element {
-  margin-bottom: 19px;         // Taille à définir
+  margin-bottom: 19px;         
 }
 
 .wpcf7-form input[type="submit"] {
@@ -491,11 +483,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;    // Taille à définir
+  height: 40px;    
   width: 100%;
-  //margin-top: 130px;    // Taille à définir
-  border-top: 1px solid #000;
-  
+  border-top: 1px solid #000; 
   ul {
       display: flex;
       list-style-type: none;

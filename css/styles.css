@@ -52,9 +52,8 @@ h3 {
   color: var(--noir-100);
 }
 
-/*
 .description-photo {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -63,7 +62,7 @@ h3 {
   text-transform: uppercase;
   color: var(--noir-100);
 }
-*/
+
 /* Styles pour Poppins */
 p {
   font-family: "Poppins", sans-serif;
@@ -85,8 +84,8 @@ p {
 }
 .header-menu img {
   width: 216px;
-  height: 14px;
-  margin-left: 146px;
+  height: auto;
+  margin-left: 9.125rem;
 }
 .header-menu nav ul {
   list-style-type: none;
@@ -95,10 +94,10 @@ p {
   display: flex;
 }
 .header-menu nav ul li {
-  margin-right: 45px;
+  margin-right: 2.8125rem;
 }
 .header-menu nav ul li:last-child {
-  margin-right: 146px;
+  margin-right: 9.125rem;
 }
 .header-menu nav ul li a {
   text-decoration: none;
@@ -114,7 +113,7 @@ div.entry-content {
 
 /* Hero Header */
 .hero-header {
-  margin-bottom: 80px; /* Taille à définir */
+  margin-bottom: 80px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -141,6 +140,7 @@ div.entry-content {
   margin-left: 146px;
 }
 
+/* filtres page accueil */
 .photo-filters {
   height: 82px;
   margin-right: 146px;
@@ -240,12 +240,12 @@ div.entry-content {
 
 .left-column {
   width: 420px; /* Taille à définir */
-  height: auto; /* Taille à définir */
+  height: auto;
   width: 50%; /* Taille à définir */
   border-bottom: 1px solid black;
   margin-left: 146px; /* Taille à définir */
   margin-right: 10px;
-  padding-bottom: 35px; /* Taille à définir */
+  padding-bottom: 35px;
 }
 .left-column p {
   font-family: Space Mono;
@@ -291,6 +291,7 @@ div.entry-content {
   align-items: center;
 }
 
+/* bouton contact page photo */
 .contact-link {
   display: flex;
   justify-content: space-between;
@@ -308,6 +309,7 @@ div.entry-content {
   position: relative;
 }
 
+/* Miniature photo */
 .hover-thumbnail {
   position: absolute;
   width: 80px;
@@ -351,6 +353,7 @@ button.contactButton:hover {
   margin-left: 146px;
 }
 
+/* les 2 photos associées */
 .container-photos {
   display: flex;
   justify-content: center;
