@@ -163,7 +163,7 @@ div.entry-content {
     #filter-category {
       width: 260px;
       height: 43px;
-      font-family: 'poppins', monospace;
+      font-family: 'poppins', sans-serif;
       font-weight: 500;
       font-size: 12px;
       border-radius: 8px;
@@ -173,7 +173,7 @@ div.entry-content {
     #filter-format{
       width: 260px;
       height: 43px;
-      font-family: 'poppins', monospace;
+      font-family: 'poppins', sans-serif;
       font-weight: 500;
       font-size: 12px;
       border-radius: 8px;
@@ -183,7 +183,7 @@ div.entry-content {
     #sort-date {
       width: 260px;
       height: 43px;
-      font-family: 'poppins', monospace;
+      font-family: 'poppins', sans-serif;
       font-weight: 500;
       font-size: 12px;
       border-radius: 8px;
@@ -345,11 +345,11 @@ div.entry-content {
   gap: 30px;    // Taille à définir
   justify-content: flex-end;
   align-items:last baseline;
-  margin-top: 10px;
+  padding-top: 5px;
   margin-bottom: 10px;
   position: absolute;
   bottom: 0;
-  right: 0
+  right: 0;
 } 
 
 button {

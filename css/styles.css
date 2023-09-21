@@ -149,7 +149,7 @@ div.entry-content {
 .photo-filters #filter-category {
   width: 260px;
   height: 43px;
-  font-family: "poppins", monospace;
+  font-family: "poppins", sans-serif;
   font-weight: 500;
   font-size: 12px;
   border-radius: 8px;
@@ -159,7 +159,7 @@ div.entry-content {
 .photo-filters #filter-format {
   width: 260px;
   height: 43px;
-  font-family: "poppins", monospace;
+  font-family: "poppins", sans-serif;
   font-weight: 500;
   font-size: 12px;
   border-radius: 8px;
@@ -169,7 +169,7 @@ div.entry-content {
 .photo-filters #sort-date {
   width: 260px;
   height: 43px;
-  font-family: "poppins", monospace;
+  font-family: "poppins", sans-serif;
   font-weight: 500;
   font-size: 12px;
   border-radius: 8px;
@@ -321,7 +321,7 @@ div.entry-content {
   gap: 30px;
   justify-content: flex-end;
   align-items: last baseline;
-  margin-top: 10px;
+  padding-top: 5px;
   margin-bottom: 10px;
   position: absolute;
   bottom: 0;
