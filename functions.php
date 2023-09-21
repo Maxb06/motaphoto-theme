@@ -34,8 +34,7 @@ function load_more_posts() {
 
     $query = new WP_Query([
         'post_type' => 'post',
-        'posts_per_page' => 8, // Nombre d'articles à charger (selon votre besoin)
-        'paged' => $paged
+        'posts_per_page' => 12,
     ]);
 
     if ($query->have_posts()):
@@ -50,6 +49,7 @@ function load_more_posts() {
 add_action('wp_ajax_load_more', 'load_more_posts');
 add_action('wp_ajax_nopriv_load_more', 'load_more_posts');
 */
+
 
 /* Enqueue Javascript */
 /*
