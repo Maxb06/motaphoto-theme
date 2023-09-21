@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
   
   function loadPhotos(page, category = null, format = null, sort = null) {
     let url = `https://motaphoto.local/wp-json/wp/v2/photographie?page=${page}&per_page=12`;
-    
+              // /wp-admin/admin-ajax.php si Ajax
     if (category && category !== 'all') {
       url += `&categorie-photo=${category}`;
     }
