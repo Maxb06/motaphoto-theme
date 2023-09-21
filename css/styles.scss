@@ -16,6 +16,7 @@
 
 #page {
     max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -130,7 +131,7 @@ div.entry-content {
   justify-content: center;
   align-items: center;
   max-width: 1440px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -139,6 +140,7 @@ div.entry-content {
 .photo-event {
   position: absolute;
   width: 55vw;
+  height: auto;
 }
 
 /* Page d'accueil */
