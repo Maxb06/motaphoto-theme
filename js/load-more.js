@@ -1,3 +1,4 @@
+/*
 let page = 1; // initialisation de la variable page
 
 jQuery(document).ready(function($) {
@@ -61,8 +62,8 @@ jQuery(document).ready(function($) {
     loadPhotos(page, selectedCategory, selectedFormat, selectedSort);
   });
 });
+*/
 
-/* 
 //load More
 jQuery(document).ready(function($) {
     let page = 1; 
@@ -77,9 +78,8 @@ jQuery(document).ready(function($) {
                 page: page
             },
             success: function(response) {
-                $(".photo-catalog").append(response);
+                $("#photo-container").append(response);
             }
         });
     });
 });
-*/
