@@ -45,11 +45,109 @@ function load_more () {
         endwhile;
     endif;
 
-    exit();
+    die();
 }
 
 add_action('wp_ajax_load_more', 'load_more');
 add_action('wp_ajax_nopriv_load_more', 'load_more');
+
+/* chargement dynamique des catégories et formats */
+function load_categories() {
+  $categories = get_terms([
+      'taxonomy' => 'categorie-photo',
+      'hide_empty' => false,
+  ]);
+
+  $output = [];
+
+  foreach ($categories as $category) {
+      $output[] = [
+          'id' => $category->term_id,
+          'name' => $category->name,
+      ];
+  }
+
+  echo json_encode($output);
+  die();
+}
+add_action('wp_ajax_load_categories', 'load_categories');
+add_action('wp_ajax_nopriv_load_categories', 'load_categories');
+
+
+function load_formats() {
+  $formats = get_terms([
+      'taxonomy' => 'format-photo',
+      'hide_empty' => false,
+  ]);
+
+  $output = [];
+
+  foreach ($formats as $format) {
+      $output[] = [
+          'id' => $format->term_id,
+          'name' => $format->name,
+      ];
+  }
+
+  echo json_encode($output);
+  die();
+}
+add_action('wp_ajax_load_formats', 'load_formats');
+add_action('wp_ajax_nopriv_load_formats', 'load_formats');
+
+function filter_and_sort_photos() {
+  $paged = isset($_POST['page']) ? $_POST['page'] : 1;
+  $category = isset($_POST['category']) ? $_POST['category'] : '';
+  $format = isset($_POST['format']) ? $_POST['format'] : '';
+  $order_by_date = isset($_POST['order_by_date']) ? $_POST['order_by_date'] : 'none';
+  // mettre içi si besoin d'autres paramètres 
+
+  $args = [
+      'post_type' => 'photographie',
+      'posts_per_page' => 12,
+      'paged' => $paged,
+  ];
+
+  if ($category && $category !== 'all') {
+    $args['tax_query'][] = [
+        'taxonomy' => 'categorie-photo',
+        'field' => 'id',
+        'terms' => $category
+    ];
+}
+
+if ($format && $format !== 'all') {
+    $args['tax_query'][] = [
+        'taxonomy' => 'format-photo',
+        'field' => 'id',
+        'terms' => $format
+    ];
+}
+
+  if ($order_by_date === 'desc' || $order_by_date === 'asc') {
+    $args['orderby'] = 'date';
+    $args['order'] = strtoupper($order_by_date);
+}
+  // ajout içi d'autres paramètres de requête si besoin
+
+  $query = new WP_Query($args);
+
+  $output = '';
+
+  if ($query->have_posts()):
+      while ($query->have_posts()): $query->the_post();
+          ob_start();
+          get_template_part('template-parts/photo-block'); 
+          $output .= ob_get_clean();
+      endwhile;
+  endif;
+
+  echo $output;
+  die();
+}
+
+add_action('wp_ajax_filter_and_sort', 'filter_and_sort_photos');
+add_action('wp_ajax_nopriv_filter_and_sort', 'filter_and_sort_photos');
 
 
 /* Nav menu */
