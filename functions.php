@@ -14,8 +14,46 @@ function enqueue_my_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_my_scripts' );
 
+/* Enqueue Javascript 'load-more.js' charger plus */
 
-// Nav menu
+function enqueue_load_more_script() {
+  wp_enqueue_script('load-more', get_template_directory_uri() . '/js/load-more.js', ['jquery'], null, true);
+
+  wp_localize_script('load-more', 'load_more_params', [
+      'ajax_url' => admin_url('admin-ajax.php')
+  ]);
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
+
+
+/* fonction pour traiter la requête Ajax */
+
+function load_more () {
+  
+    $paged = $_POST['page'];
+    
+    $query = new WP_Query ([
+        'post_type' => 'photographie',
+        'posts_per_page' => 12,
+        'paged' => $paged
+    ]);
+
+    if ($query->have_posts()):
+        while ($query->have_posts()): $query->the_post();
+            get_template_part('template-parts/photo-block'); // Le template partiel vignette photo
+        endwhile;
+    endif;
+
+    exit();
+}
+
+add_action('wp_ajax_load_more', 'load_more');
+add_action('wp_ajax_nopriv_load_more', 'load_more');
+
+
+/* Nav menu */
+
 function register_my_menus() {
   register_nav_menus(
     array(
@@ -27,39 +65,6 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
-/* fonction pour traiter la requête Ajax */
-/*
-function load_more_posts() {
-    $paged = $_POST['page'] + 1;
-
-    $query = new WP_Query([
-        'post_type' => 'post',
-        'posts_per_page' => 12,
-    ]);
-
-    if ($query->have_posts()):
-        while ($query->have_posts()): $query->the_post();
-            get_template_part('template-parts/photo-block'); // Votre propre template pour chaque post
-        endwhile;
-    endif;
-
-    die();
-}
-
-add_action('wp_ajax_load_more', 'load_more_posts');
-add_action('wp_ajax_nopriv_load_more', 'load_more_posts');
-*/
 
 
-/* Enqueue Javascript */
-/*
-function enqueue_load_more_script() {
-  wp_enqueue_script('load-more', get_template_directory_uri() . '/js/load-more.js', ['jquery'], null, true);
 
-  wp_localize_script('load-more', 'load_more_params', [
-      'ajax_url' => admin_url('admin-ajax.php')
-  ]);
-}
-
-add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
-*/
