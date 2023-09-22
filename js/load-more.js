@@ -1,85 +1,71 @@
-/*
-let page = 1; // initialisation de la variable page
-
 jQuery(document).ready(function($) {
-  
-  function loadPhotos(page, category = null, format = null, sort = null) {
-    let url = `https://motaphoto.local/wp-json/wp/v2/photographie?page=${page}&per_page=12`;
-              
-    if (category && category !== 'all') {
-      url += `&categorie-photo=${category}`;
-    }
+  let page = 1;
 
-    if (format && format !== "all") {
-      url += `&format-photo=${format}`;
-    }
-
-    if (sort && sort !== "none") {
-      if (sort === 'asc' || sort === 'desc') {
-          url += `&orderby=date&order=${sort}`;
-      } else {
-          url += `&order=${sort}`;
-      }
-    }
-    
-    $.ajax({
-      url: url,
-      method: 'GET',
-      success: function(data) {
-        data.forEach(function(post) {
-          let imageUrl = post.content.rendered.match(/src="([^"]+)"/)[1];
-          let html = `
-          <div class="photo-item">
-            <a href="${post.link}">
-              <img src="${imageUrl}" alt="${post.title.rendered}">
-            </a>
-          </div>`;
-          $('#photo-container').append(html);
-        });
+  // Chargement dynamique des catégories
+  $.ajax({
+      url: load_more_params.ajax_url,
+      data: {
+          action: 'load_categories'
       },
-      error: function(err) {
-        console.log('Erreur :', err);
+      success: function(response) {
+          const data = JSON.parse(response);
+          const selectCategory = $('#filter-category');
+          data.forEach(function(category) {
+              selectCategory.append(`<option value="${category.id}">${category.name}</option>`);
+          });
       }
-    });
+  });
+
+  // Chargement dynamique des formats
+  $.ajax({
+      url: load_more_params.ajax_url,
+      data: {
+          action: 'load_formats'
+      },
+      success: function(response) {
+          const data = JSON.parse(response);
+          const selectFormat = $('#filter-format');
+          data.forEach(function(format) {
+              selectFormat.append(`<option value="${format.id}">${format.name}</option>`);
+          });
+      }
+  });
+
+  function loadFilteredPhotos(appendMode = false) {
+      const selectedCategory = $('#filter-category').val();
+      const selectedFormat = $('#filter-format').val();
+      const orderByDate = $('#sort-date').val();
+
+      $.ajax({
+          url: load_more_params.ajax_url,
+          type: 'post',
+          data: {
+              action: 'filter_and_sort',
+              page: page,
+              category: selectedCategory,
+              format: selectedFormat,
+              order_by_date: orderByDate
+          },
+          success: function(response) {
+            if (appendMode) {  
+              $("#photo-container").append(response);
+            } else {
+              $("#photo-container").html(response);
+            }
+          }
+      });
   }
 
-  $('#load-more-button').on('click', function() {
-    const selectedCategory = $('#filter-category').val();
-    const selectedFormat = $('#filter-format').val();
-    const selectedSort = $('#sort-date').val();
-    
-    page++; // incrémenter le numéro de page
-    loadPhotos(page, selectedCategory, selectedFormat, selectedSort);
-  });
-
+  // Événement de changement pour les filtres et le tri
   $('#filter-category, #filter-format, #sort-date').on('change', function() {
-    $('#photo-container').empty();
-    page = 1; // réinitialisation du numéro de page
-    const selectedCategory = $('#filter-category').val();
-    const selectedFormat = $('#filter-format').val();
-    const selectedSort = $('#sort-date').val();
-    
-    loadPhotos(page, selectedCategory, selectedFormat, selectedSort);
+      page = 1;
+      loadFilteredPhotos();
+  });
+
+  // Événement de clic pour le bouton de chargement de plus de photos
+  $("#load-more-button").on("click", function() {
+      page++;
+      loadFilteredPhotos(true); // active le mode Append
   });
 });
-*/
 
-//load More
-jQuery(document).ready(function($) {
-    let page = 1; 
-
-    $("#load-more-button").on("click", function() {
-        page++;
-        $.ajax({
-            url: load_more_params.ajax_url,
-            type: 'post',
-            data: {
-                action: 'load_more',
-                page: page
-            },
-            success: function(response) {
-                $("#photo-container").append(response);
-            }
-        });
-    });
-});
