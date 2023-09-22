@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
 });
 
 /* Chargement dynamique des options de filtres */
-
+/*
 jQuery(document).ready(function($) {
   // Chargement dynamique des catégories
   $.get('/wp-json/wp/v2/categorie-photo', function(data) {
@@ -74,4 +74,4 @@ jQuery(document).ready(function($) {
       });
   });
 });
-
+*/
