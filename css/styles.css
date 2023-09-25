@@ -496,6 +496,7 @@ button.contactButton:hover {
 }
 
 /* Lightbox modale */
+/*
 #lightbox-overlay {
   position: fixed;
   top: 0;
@@ -530,5 +531,6 @@ button.contactButton:hover {
   display: flex;
   justify-content: space-between;
 }
+*/
 
 /*# sourceMappingURL=styles.css.map */
