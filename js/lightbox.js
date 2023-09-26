@@ -3,7 +3,6 @@ jQuery(document).ready(function($) {
     $('.open-lightbox').on('click', function() {
         var imageUrl = $(this).data('image-url');
         $('#lightbox-image').attr('src', imageUrl);
-        //  ici, ajout titre ou d'autres info si nécessaire
         $('#lightbox-overlay').show();
     });
 
