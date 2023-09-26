@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
     // Ouvrir la lightbox
-    $('.open-lightbox').on('click', function() {
+    $('body').on('click', '.open-lightbox', function() {
         var imageUrl = $(this).data('image-url');
         $('#lightbox-image').attr('src', imageUrl);
         $('#lightbox-overlay').show();
