@@ -5,6 +5,7 @@
 
         <div id="lightbox-info">
             <p id="lightbox-title"></p>
+            <p id="lightbox-reference"></p>
         </div>
 
         <div id="lightbox-controls">
