@@ -198,7 +198,7 @@ div.entry-content {
   #lightbox-container {
     position: relative;
     width: 100vw; 
-    height: 90vh;
+    height: 92vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,7 +209,29 @@ div.entry-content {
       display: block; 
       object-fit: contain; 
     }
-    
+    /* Titre & Catégorie photo dans "Agrandir" */
+    #lightbox-info {
+      display: flex;
+      //justify-content: space-between;
+      position: absolute;  // positionnement relatif à #lightbox-container
+      bottom: -3%;  
+      left: 35%;
+      right: 35%;
+      width: auto;
+
+      #lightbox-title {
+          flex: 1;
+          text-align: left;
+          color: white;
+      }
+
+      #lightbox-reference {
+          flex: 1;
+          text-align: right;
+          color: white;
+      }
+  }
+
     #close-button {
       position: absolute;
       top: 10px;
@@ -220,7 +242,7 @@ div.entry-content {
     #lightbox-controls {
       position: absolute;
       top: 50%;
-      width: 100%;
+      width: 90%;
       display: flex;
       justify-content: space-between;
 
@@ -399,9 +421,14 @@ div.entry-content {
   margin-left: 10px;     /* Taille à définir */
   img {
     width: 100%;
-    height: 100vh;
+    max-height: 90vh;
     object-fit: cover;
   }
+}
+
+.photo-wrapper {  // L'icone agrandir
+  position: relative;
+  overflow: hidden; /* Ceci s'assure que l'overlay et l'icône restent dans le cadre de l'image */
 }
 
 .bottom-column {
