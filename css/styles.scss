@@ -421,14 +421,18 @@ div.entry-content {
   margin-left: 10px;     /* Taille à définir */
   img {
     width: 100%;
-    max-height: 90vh;
+    max-height: 90vh;    /* Image photo droite */
     object-fit: cover;
   }
 }
 
+#prev-button, #next-button {  // Enlever les flèches agrandir photo 
+  display: block;
+}
+
 .photo-wrapper {  // L'icone agrandir
   position: relative;
-  overflow: hidden; /* Ceci s'assure que l'overlay et l'icône restent dans le cadre de l'image */
+  overflow: hidden; 
 }
 
 .bottom-column {

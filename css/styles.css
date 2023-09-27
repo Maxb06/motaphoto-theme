@@ -397,13 +397,17 @@ div.entry-content {
 }
 .right-column img {
   width: 100%;
-  max-height: 90vh;
+  max-height: 90vh; /* Image photo droite */
   object-fit: cover;
+}
+
+#prev-button, #next-button {
+  display: block;
 }
 
 .photo-wrapper {
   position: relative;
-  overflow: hidden; /* Ceci s'assure que l'overlay et l'icône restent dans le cadre de l'image */
+  overflow: hidden;
 }
 
 .bottom-column {
