@@ -34,7 +34,6 @@ h1 {
 
 h2 {
   font-family: "Space Mono", monospace;
-  font-size: 66px;
   font-style: italic;
   font-weight: 400;
   line-height: 58px;
@@ -382,6 +381,7 @@ div.entry-content {
 .left-column h2 {
   width: 20vw;
   margin-bottom: 30px;
+  font-size: 66px;
 }
 
 .photo-info p a {
