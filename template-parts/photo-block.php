@@ -10,7 +10,12 @@
                 </a>
             </div>
             <div class="expand-icon">
-                <img class="open-lightbox" data-image-url="<?php echo get_the_post_thumbnail_url(); ?>" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_fullscreen.png" alt="Agrandir la photo">
+                <img class="open-lightbox" 
+                    data-image-url="<?php echo get_the_post_thumbnail_url(); ?>" 
+                    data-image-title="<?php echo the_title_attribute(array('echo' => false)); ?>" 
+                    data-image-reference="<?php echo esc_attr(get_field('reference')); ?>" 
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_fullscreen.png" 
+                    alt="Agrandir la photo">
             </div>
             <div class="photo-title">
                 <?php the_title(); ?>
