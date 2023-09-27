@@ -9,6 +9,13 @@ jQuery(document).ready(function($) {
         $('#lightbox-title').text(imageTitle);
         $('#lightbox-reference').text(imageReference);
         $('#lightbox-overlay').show();
+
+        // cacher les flèches sur .single-photo-lightbox quand on agrandit la photo page photo
+        if ($(this).hasClass('single-photo-lightbox')) {
+            $('#prev-button, #next-button').hide();
+        } else {
+            $('#prev-button, #next-button').show();
+        }
     });
 
     // Fermer la lightbox
