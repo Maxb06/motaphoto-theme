@@ -24,11 +24,17 @@ while ( have_posts() ) :
 				<p>Date : <?php the_date('Y'); ?></p>
 			</div>
 			<div class="right-column photo-display">
-				<?php                           // Vignette image de droite
-				if ( has_post_thumbnail() ) {
-				the_post_thumbnail('full');
-				} 
-				?>
+				<?php if ( has_post_thumbnail() ) : ?>
+					<div class="photo-wrapper">
+						<?php the_post_thumbnail('full'); ?>
+						
+						<div class="photo-overlay">
+							<div class="expand-icon">
+								<img class="open-lightbox" data-image-url="<?php echo get_the_post_thumbnail_url(); ?>" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_fullscreen.png" alt="Agrandir la photo">
+							</div>
+						</div>
+					</div>
+				<?php endif; ?>
 			</div>
 		</div>
 		<div class="bottom-column photo-actions">
