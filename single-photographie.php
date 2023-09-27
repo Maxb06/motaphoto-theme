@@ -30,7 +30,7 @@ while ( have_posts() ) :
 						
 						<div class="photo-overlay">
 							<div class="expand-icon">
-								<img class="open-lightbox" data-image-url="<?php echo get_the_post_thumbnail_url(); ?>" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_fullscreen.png" alt="Agrandir la photo">
+								<img class="open-lightbox single-photo-lightbox" data-image-url="<?php echo get_the_post_thumbnail_url(); ?>" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon_fullscreen.png" alt="Agrandir la photo">
 							</div>
 						</div>
 					</div>
