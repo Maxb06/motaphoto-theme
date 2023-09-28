@@ -141,6 +141,83 @@ div.entry-content {
   margin-left: 7.6vw;
 }
 
+/* filtres page accueil */
+.photo-filters {
+  height: 82px;
+  margin-right: 7.6vw;
+  margin-left: 7.6vw;
+  display: flex;
+  justify-content: space-between;
+}
+.photo-filters #filter-category {
+  width: 260px;
+  height: 43px;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  border-radius: 8px;
+  border: 1.3px solid #B8BBC2;
+  padding-left: 18px;
+}
+.photo-filters #filter-format {
+  width: 260px;
+  height: 43px;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  border-radius: 8px;
+  border: 1.3px solid #B8BBC2;
+  padding-left: 18px;
+}
+.photo-filters #sort-date {
+  width: 260px;
+  height: 43px;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  border-radius: 8px;
+  border: 1.3px solid #B8BBC2;
+  padding-left: 18px;
+}
+
+.filters-left {
+  width: 49%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-right {
+  width: 49%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Animations des filtres */
+select {
+  background-color: #FFFFFF;
+}
+
+select option:first-child:hover,
+select option:first-child:active {
+  background-color: #FFFFFF;
+}
+
+/* Hover State */
+select:hover {
+  background-color: #FFD6D6;
+  border: 1.3px solid #215AFF !important;
+}
+
+/* Pressing State */
+select:active {
+  background-color: #FE5858;
+}
+
+/* Selected State */
+select.selected {
+  background-color: #E00000;
+}
+
 /* Vignette photo */
 .photo-item {
   flex-basis: calc(50% - 10px);
@@ -273,57 +350,6 @@ div.entry-content {
   right: 23px;
   font-family: "Space Mono", sans-serif;
   font-size: 14px;
-}
-
-/* filtres page accueil */
-.photo-filters {
-  height: 82px;
-  margin-right: 7.6vw;
-  margin-left: 7.6vw;
-  display: flex;
-  justify-content: space-between;
-}
-.photo-filters #filter-category {
-  width: 260px;
-  height: 43px;
-  font-family: "poppins", sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  border-radius: 8px;
-  border: 1.3px solid #B8BBC2;
-  padding-left: 18px;
-}
-.photo-filters #filter-format {
-  width: 260px;
-  height: 43px;
-  font-family: "poppins", sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  border-radius: 8px;
-  border: 1.3px solid #B8BBC2;
-  padding-left: 18px;
-}
-.photo-filters #sort-date {
-  width: 260px;
-  height: 43px;
-  font-family: "poppins", sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  border-radius: 8px;
-  border: 1.3px solid #B8BBC2;
-  padding-left: 18px;
-}
-
-.filters-left {
-  width: 49%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.filter-right {
-  width: 49%;
-  display: flex;
-  justify-content: flex-end;
 }
 
 /* BTN 'Charger plus' page d'accueil */
@@ -544,6 +570,7 @@ button.contactButton:hover {
 .popup-contact h2 {
   margin-top: 25px;
   margin-bottom: 30px;
+  font-size: 66px;
 }
 
 .wpcf7-spinner {
