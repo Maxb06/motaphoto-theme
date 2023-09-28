@@ -6,6 +6,7 @@ function motaphoto_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'motaphoto_enqueue_styles' );
 
+
 /* Chargement de mes fichiers JS */
 function enqueue_my_scripts() {
   wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0', true );
@@ -14,8 +15,8 @@ function enqueue_my_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_my_scripts' );
 
-/* Enqueue Javascript 'load-more.js' charger plus */
 
+/* Enqueue Ajax 'load-more.js' charger plus */
 function enqueue_load_more_script() {
   wp_enqueue_script('load-more', get_template_directory_uri() . '/js/load-more.js', ['jquery'], null, true);
 
@@ -23,12 +24,10 @@ function enqueue_load_more_script() {
       'ajax_url' => admin_url('admin-ajax.php')
   ]);
 }
-
 add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
 
 
 /* fonction pour traiter la requête Ajax */
-
 function load_more () {
   
     $paged = $_POST['page'];
@@ -95,12 +94,12 @@ function load_formats() {
 add_action('wp_ajax_load_formats', 'load_formats');
 add_action('wp_ajax_nopriv_load_formats', 'load_formats');
 
+
 function filter_and_sort_photos() {
   $paged = isset($_POST['page']) ? $_POST['page'] : 1;
   $category = isset($_POST['category']) ? $_POST['category'] : '';
   $format = isset($_POST['format']) ? $_POST['format'] : '';
-  $order_by_date = isset($_POST['order_by_date']) ? $_POST['order_by_date'] : 'none';
-  // mettre içi si besoin d'autres paramètres 
+  $order_by_date = isset($_POST['order_by_date']) ? $_POST['order_by_date'] : 'none'; 
 
   $args = [
       'post_type' => 'photographie',
@@ -128,7 +127,6 @@ if ($format && $format !== 'all') {
     $args['orderby'] = 'date';
     $args['order'] = strtoupper($order_by_date);
 }
-  // ajout içi d'autres paramètres de requête si besoin
 
   $query = new WP_Query($args);
 
@@ -145,13 +143,11 @@ if ($format && $format !== 'all') {
   echo $output;
   die();
 }
-
 add_action('wp_ajax_filter_and_sort', 'filter_and_sort_photos');
 add_action('wp_ajax_nopriv_filter_and_sort', 'filter_and_sort_photos');
 
 
 /* Nav menu */
-
 function register_my_menus() {
   register_nav_menus(
     array(
@@ -162,7 +158,4 @@ function register_my_menus() {
   );
 }
 add_action( 'init', 'register_my_menus' );
-
-
-
 
