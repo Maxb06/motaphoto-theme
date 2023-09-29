@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
         <?php 
-        // Récupèration de toutes les photos
+        // Récupèration de toutes les photos pour Hero Header
         $args = array(
             'post_type' => 'photographie',
             'posts_per_page' => -1,  // -1 pour tous les posts
@@ -9,7 +9,7 @@
 
         $all_photos = new WP_Query($args);
 
-        // Sélectionne une photo aléatoire
+        // Sélectionne une photo aléatoire Hero header
         if ($all_photos->have_posts()):
             $random_key = array_rand($all_photos->posts, 1);
             $random_photo = $all_photos->posts[$random_key];
@@ -85,7 +85,7 @@
                     </select>
                 </div> 
             </div> 
-            
+
             <div id="photo-container">
                 <?php  // Tableau requête wp_query nombre de posts par page 
                     $args = array(
