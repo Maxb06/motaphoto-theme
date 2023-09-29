@@ -192,6 +192,11 @@ div.entry-content {
   justify-content: flex-end;
 }
 
+/*
+.filter-list {  // Test changement filtres
+  display: none;
+}
+*/
 /* Animations des filtres */
 #filter-category:hover,
 #filter-format:hover,

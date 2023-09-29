@@ -26,15 +26,55 @@
         </section>
 
         <section class="photo-catalog">
+
+    <!--    <div class="photo-filters">
+                <div class="filters-left">
+
+                    <div class="custom-filter" id="filter-category">
+                        <div class="selected-option" role="button" aria-expanded="false">
+                            <p>CATÉGORIES</p>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/chevron.png" alt="flèche descendre">
+                        </div>
+                        <div class="filter-list">
+
+                        </div>
+                    </div>
+
+                    <div class="custom-filter" id="filter-format">
+                        <div class="selected-option" role="button" aria-expanded="false">
+                            <p>FORMATS</p>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/chevron.png" alt="flèche descendre">
+                        </div>
+                        <div class="filter-list">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-right">
+                    <div class="custom-filter" id="sort-date">
+                        <div class="selected-option" role="button" aria-expanded="false">
+                            <p>TRIER PAR</p>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/chevron.png" alt="flèche descendre">
+                        </div>
+                        <div class="filter-list">
+                            <div data-value="desc">Plus récentes</div>
+                            <div data-value="asc">Plus anciennes</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> -->
+             
             <div class="photo-filters">
                 <div class="filters-left">
                     <select id="filter-category">
                         <option value="all">CATÉGORIES</option>
-                        <!-- Options chargées dynamiquement -->
+                        
                     </select>
                     <select id="filter-format">
                         <option value="all">FORMATS</option>
-                        <!-- Options chargées dynamiquement -->
+                        
                     </select>
                 </div>
                 <div class="filter-right">
@@ -43,8 +83,9 @@
                         <option value="desc">Plus récentes</option>
                         <option value="asc">Plus anciennes</option>
                     </select>
-                </div>
-            </div>
+                </div> 
+            </div> 
+            
             <div id="photo-container">
                 <?php  // Tableau requête wp_query nombre de posts par page 
                     $args = array(
