@@ -378,7 +378,7 @@ div.entry-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 38px; /* Taille à définir */
+  margin-top: 38px;
 }
 @media (max-width: 1024px) {
   .both-columns {
@@ -391,7 +391,7 @@ div.entry-content {
   height: auto;
   width: 50%; /* Taille à définir */
   border-bottom: 1px solid black;
-  margin-left: 7.6vw; /* Taille à définir */
+  margin-left: 7.6vw;
   margin-right: 10px;
   padding-bottom: 35px;
 }
@@ -408,6 +408,7 @@ div.entry-content {
   font-size: 66px;
 }
 
+/* Rendre le lien catégorie inactif */
 .photo-info p a {
   color: var(--noir-100);
   text-decoration: none;
@@ -417,18 +418,21 @@ div.entry-content {
 .right-column {
   width: 50%;
   margin-right: 7.6vw;
-  margin-left: 10px; /* Taille à définir */
+  margin-left: 10px;
+  /* Image photo droite */
 }
 .right-column img {
   width: 100%;
-  max-height: 90vh; /* Image photo droite */
+  max-height: 90vh;
   object-fit: cover;
 }
 
+/* Enlever les flèches agrandir photo */
 #prev-button, #next-button {
   display: block;
 }
 
+/* L'icone agrandir */
 .photo-wrapper {
   position: relative;
   overflow: hidden;

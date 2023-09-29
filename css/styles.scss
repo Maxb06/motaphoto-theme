@@ -406,7 +406,7 @@ div.entry-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 38px;   /* Taille à définir */
+  margin-top: 38px;   
     @media (max-width: 1024px) {         // Responsive page photo
       flex-direction : column-reverse;
     }
@@ -417,7 +417,7 @@ div.entry-content {
   height: auto;   
   width: 50%;     /* Taille à définir */
   border-bottom: 1px solid black;
-  margin-left: 7.6vw;   /* Taille à définir */
+  margin-left: 7.6vw;   
   margin-right: 10px;
   padding-bottom: 35px;  
     p {
@@ -433,8 +433,8 @@ div.entry-content {
       font-size: 66px;
     }
 }
-
-.photo-info p a {   // Rendre le lien catégorie inactif
+/* Rendre le lien catégorie inactif */
+.photo-info p a {   
   color: var(--noir-100);
   text-decoration: none;
   pointer-events: none;
@@ -443,19 +443,20 @@ div.entry-content {
 .right-column {
   width: 50%;
   margin-right: 7.6vw;   
-  margin-left: 10px;     /* Taille à définir */
+  margin-left: 10px; 
+/* Image photo droite */    
   img {
     width: 100%;
-    max-height: 90vh;    /* Image photo droite */
+    max-height: 90vh;    
     object-fit: cover;
   }
 }
-
-#prev-button, #next-button {  // Enlever les flèches agrandir photo 
+/* Enlever les flèches agrandir photo */
+#prev-button, #next-button {  
   display: block;
 }
-
-.photo-wrapper {  // L'icone agrandir
+/* L'icone agrandir */
+.photo-wrapper {  
   position: relative;
   overflow: hidden; 
 }
@@ -520,7 +521,7 @@ button {
   &.contactButton {
   width: 272px;    // Taille à définir
   height: 50px;    // Taille à définir
-  padding: 8px 15px;  // Taille à définir
+  padding: 8px 15px;  
   background-color: var(--Gris-medium);
   border: none;
   font-family: Space Mono;
@@ -534,9 +535,9 @@ button {
 }
 
 .title-related-photos {
-  margin-bottom: 52px;   // Taille à définir
-  margin-top: 70px;      // Taille à définir
-  margin-left: 146px;    // Taille à définir
+  margin-bottom: 52px;
+  margin-top: 70px;      
+  margin-left: 146px;    
 }
 
 /* les 2 photos associées */
