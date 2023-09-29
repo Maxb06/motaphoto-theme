@@ -207,29 +207,27 @@ div.entry-content {
 
 /* Animations des filtres */
 
-select {
-  background-color: #FFFFFF;
+#filter-category:hover,
+#filter-format:hover,
+#sort-date:hover {
+    background-color: #FFD6D6;
 }
 
-select option:first-child:hover,
-select option:first-child:active {
-  background-color: #FFFFFF; 
+#filter-category:active,
+#filter-format:active,
+#sort-date:active {
+    background-color: #FE5858;
 }
 
-/* Hover State */
-select:hover {
-  background-color: #FFD6D6;
+.selected-filter {
   border: 1.3px solid #215AFF !important;
 }
 
-/* Pressing State */
-select:active {
-  background-color: #FE5858;
-}
-
-/* Selected State */
-select.selected {
-  background-color: #E00000;
+#filter-category:focus, 
+#filter-format:focus, 
+#sort-date:focus {
+    outline: none;
+    border-color: #A0A3AC;
 }
 
 /* Vignette photo */
