@@ -60,6 +60,16 @@ jQuery(document).ready(function($) {
     $('#filter-category, #filter-format, #sort-date').on('change', function() {
     page = 1;
     loadFilteredPhotos();
+
+      const selectedValue = $(this).val();
+      if (selectedValue !== "all" && selectedValue !== "none") {
+          $(this).css('background-color', '#E00000');
+          $(this).addClass('selected-filter'); // Ajoute la bordure bleue
+      } else {
+          $(this).css('background-color', '');
+          $(this).removeClass('selected-filter'); // Supprime la bordure bleue
+      }
+    
     });
 
   // Événement de clic pour le bouton de chargement de plus de photos
