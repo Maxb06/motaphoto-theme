@@ -27,7 +27,7 @@
 
         <section class="photo-catalog">
 
-    <!--    <div class="photo-filters">
+        <div class="photo-filters">
                 <div class="filters-left">
 
                     <div class="custom-filter" id="filter-category">
@@ -36,7 +36,7 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/chevron.png" alt="flèche descendre">
                         </div>
                         <div class="filter-list">
-                           
+                            <div data-value="all">CATÉGORIES</div>
                         </div>
                     </div>
 
@@ -46,7 +46,7 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/chevron.png" alt="flèche descendre">
                         </div>
                         <div class="filter-list">
-                        
+                            <div data-value="all">FORMATS</div>
                         </div>
                     </div>
                 </div>
@@ -58,14 +58,15 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/chevron.png" alt="flèche descendre">
                         </div>
                         <div class="filter-list">
+                            <div data-value="none">TRIER PAR</div>
                             <div data-value="desc">Plus récentes</div>
                             <div data-value="asc">Plus anciennes</div>
                         </div>
                     </div>
                 </div>
 
-            </div> -->
-            
+            </div> 
+            <!--
             <div class="photo-filters">
                 <div class="filters-left">
                     <select id="filter-category">
@@ -84,7 +85,7 @@
                         <option value="asc">Plus anciennes</option>
                     </select>
                 </div> 
-            </div> 
+            </div> -->
 
             <div id="photo-container">
                 <?php  // Tableau requête wp_query nombre de posts par page 
