@@ -36,7 +36,7 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/chevron.png" alt="flèche descendre">
                         </div>
                         <div class="filter-list">
-
+                           
                         </div>
                     </div>
 
@@ -46,7 +46,7 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/chevron.png" alt="flèche descendre">
                         </div>
                         <div class="filter-list">
-                            
+                        
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                 </div>
 
             </div> -->
-             
+            
             <div class="photo-filters">
                 <div class="filters-left">
                     <select id="filter-category">
