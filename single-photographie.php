@@ -122,7 +122,7 @@ while ( have_posts() ) :
 						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?> <!-- Si pas d'images supplémentaires -->
 						<?php else : ?> 
-						<p>De nouvelles photos seront ajoutées prochainement 📷</p>
+						<p>De nouvelles photos seront publiées prochainement 📷</p>
 					<?php endif; ?>
 				</div>
 			</div>
