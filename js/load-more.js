@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+/*jQuery(document).ready(function($) {
     let page = 1;
 
   // Chargement dynamique des catégories
@@ -77,11 +77,17 @@ jQuery(document).ready(function($) {
       page++;
       loadFilteredPhotos(true); // active le mode Append
     });
-});
+});*/
 
-/*
+
 jQuery(document).ready(function($) {
     let page = 1;
+
+    const filterNames = {
+        "filter-category": "CATÉGORIES",
+        "filter-format": "FORMATS",
+        "sort-date": "TRIER PAR"
+    };
 
     // Chargement dynamique des catégories
     $.ajax({
@@ -117,9 +123,15 @@ jQuery(document).ready(function($) {
             const $filter = $(this).closest(".custom-filter");
             const $selectedOption = $filter.find(".selected-option p");
             const selectedValue = $(this).data('value');
+    
+            if (selectedValue === "all" || selectedValue === "none") {
+                $selectedOption.text(filterNames[$filter.attr('id')]);
+                $filter.attr('data-selected-value', "");
+            } else {
+                $selectedOption.text($(this).text());
+                $filter.attr('data-selected-value', selectedValue);
+            }
             
-            $selectedOption.text($(this).text());
-            $filter.attr('data-selected-value', selectedValue);
             $filter.find(".filter-list").hide();
             $(this).siblings().removeClass('selected');
             $(this).addClass('selected');
@@ -128,7 +140,7 @@ jQuery(document).ready(function($) {
             loadFilteredPhotos();
         });
     }
-
+    
     function loadFilteredPhotos(appendMode = false) {
         const selectedCategory = $('#filter-category').attr('data-selected-value');
         const selectedFormat = $('#filter-format').attr('data-selected-value');
@@ -172,10 +184,23 @@ jQuery(document).ready(function($) {
         });
     }
 
-    // Ouvrir/Fermer le Dropdown
-    $(".custom-filter .selected-option").on('click', function() {
+    $(document).on('click', function(event) {
+        // Si l'élément cliqué n'est pas un élément du filtre (ou un de ses descendants)
+        if (!$(event.target).closest('.custom-filter').length) {
+            // Fermez tous les filtres ouverts
+            $('.custom-filter .filter-list').hide();
+            $('.selected-option').removeClass('expanded');
+        }
+    });
+    
+    // Pour l'événement click de vos filtres
+    $('.custom-filter .selected-option').on('click', function(event) {
+        event.stopPropagation(); // Empêche l'événement click de remonter jusqu'au document
+    
+        // Ouvrir/Fermer le Dropdown
         const $list = $(this).next(".filter-list");
         $list.toggle();
+        $(this).toggleClass('expanded');
     });
 
     // Événement de clic pour le bouton de chargement de plus de photos
@@ -185,4 +210,3 @@ jQuery(document).ready(function($) {
     });
 });
 
-*/
