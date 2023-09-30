@@ -78,3 +78,111 @@ jQuery(document).ready(function($) {
       loadFilteredPhotos(true); // active le mode Append
     });
 });
+
+/*
+jQuery(document).ready(function($) {
+    let page = 1;
+
+    // Chargement dynamique des catégories
+    $.ajax({
+        url: load_more_params.ajax_url,
+        data: { action: 'load_categories' },
+        success: function(response) {
+            const data = JSON.parse(response);
+            const categoryList = $('#filter-category .filter-list');
+            data.forEach(function(category) {
+                categoryList.append(`<div data-value="${category.id}">${category.name}</div>`);
+            });
+            bindFilterEvents(); // Ajout fonction pour lier les événements après avoir ajouté des éléments au DOM
+        }
+    });
+
+    // Chargement dynamique des formats
+    $.ajax({
+        url: load_more_params.ajax_url,
+        data: { action: 'load_formats' },
+        success: function(response) {
+            const data = JSON.parse(response);
+            const formatList = $('#filter-format .filter-list');
+            data.forEach(function(format) {
+                formatList.append(`<div data-value="${format.id}">${format.name}</div>`);
+            });
+            bindFilterEvents(); // Ajout fonction pour lier les événements après avoir ajouté des éléments au DOM
+        }
+    });
+
+    function bindFilterEvents() {
+        // Gérer les Clics sur les Options du Dropdown
+        $(".custom-filter .filter-list div").on('click', function() {
+            const $filter = $(this).closest(".custom-filter");
+            const $selectedOption = $filter.find(".selected-option p");
+            const selectedValue = $(this).data('value');
+            
+            $selectedOption.text($(this).text());
+            $filter.attr('data-selected-value', selectedValue);
+            $filter.find(".filter-list").hide();
+            $(this).siblings().removeClass('selected');
+            $(this).addClass('selected');
+            
+            // Chargement filtré des photos
+            loadFilteredPhotos();
+        });
+    }
+
+    function loadFilteredPhotos(appendMode = false) {
+        const selectedCategory = $('#filter-category').attr('data-selected-value');
+        const selectedFormat = $('#filter-format').attr('data-selected-value');
+        const orderByDate = $('#sort-date').attr('data-selected-value');
+
+        $.ajax({
+            url: load_more_params.ajax_url,
+            type: 'post',
+            data: {
+                action: 'filter_and_sort',
+                page: page,
+                category: selectedCategory,
+                format: selectedFormat,
+                order_by_date: orderByDate
+            },
+            success: function(response) {
+                if (appendMode) {  
+                    $("#photo-container").append(response);
+                } else {
+                    $("#photo-container").html(response);
+                }
+
+                if (selectedCategory && selectedCategory !== "all") {
+                    $('#filter-category .selected-option').css('background-color', '#E00000');
+                } else {
+                    $('#filter-category .selected-option').css('background-color', '');
+                }
+
+                if (selectedFormat && selectedFormat !== "all") {
+                    $('#filter-format .selected-option').css('background-color', '#E00000');
+                } else {
+                    $('#filter-format .selected-option').css('background-color', '');
+                }
+
+                if (orderByDate && orderByDate !== "none") {
+                    $('#sort-date .selected-option').css('background-color', '#E00000');
+                } else {
+                    $('#sort-date .selected-option').css('background-color', '');
+                }
+            }
+        });
+    }
+
+    // Ouvrir/Fermer le Dropdown
+    $(".custom-filter .selected-option").on('click', function() {
+        const $list = $(this).next(".filter-list");
+        $list.toggle();
+    });
+
+    // Événement de clic pour le bouton de chargement de plus de photos
+    $("#load-more-button").on("click", function() {
+        page++;
+        loadFilteredPhotos(true); // active le mode Append
+    });
+});
+
+*/

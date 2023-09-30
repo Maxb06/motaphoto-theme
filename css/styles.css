@@ -221,6 +221,32 @@ div.entry-content {
   border-color: #A0A3AC;
 }
 
+/* Test CSS dropdown Animations des filtres 
+
+.custom-filter .selected-option:hover {
+  background-color: #FFD6D6;
+}
+
+.custom-filter .filter-list div:hover {
+  background-color: #FFD6D6;
+}
+
+.custom-filter .selected-option:active,
+.custom-filter .filter-list div:active {
+  background-color: #FE5858;
+}
+
+.custom-filter .selected-option.selected,
+.custom-filter .filter-list div.selected {
+  background-color: #E00000;
+}
+
+.custom-filter .selected-option:focus, 
+.custom-filter .filter-list div:focus {
+  outline: none;
+  border-color: #A0A3AC;
+}
+*/
 /* Vignette photo */
 .photo-item {
   flex-basis: calc(50% - 10px);
