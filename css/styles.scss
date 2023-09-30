@@ -161,47 +161,32 @@ div.entry-content {
   margin-left: 7.6vw;
   display: flex;
   justify-content: space-between;
-    #filter-category {
-      width: 260px;
-      height: 43px;
-      font-family: 'poppins', sans-serif;
-      font-weight: 500;
-      font-size: 12px;
-      border-radius: 8px;
-      border: 1.3px solid #B8BBC2;  
-      padding-left: 18px;  
-  }
-    #filter-format{
-      width: 260px;
-      height: 43px;
-      font-family: 'poppins', sans-serif;
-      font-weight: 500;
-      font-size: 12px;
-      border-radius: 8px;
-      border: 1.3px solid #B8BBC2;
-      padding-left: 18px;
-  }
-    #sort-date {
-      width: 260px;
-      height: 43px;
-      font-family: 'poppins', sans-serif;
-      font-weight: 500;
-      font-size: 12px;
-      border-radius: 8px;
-      border: 1.3px solid #B8BBC2;
-      padding-left: 18px;
+  
+  #filter-category,
+  #filter-format,
+  #sort-date {
+    width: 260px;
+    height: 43px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 8px;
+    border: 1.3px solid #B8BBC2;
+    padding-left: 18px;
   }
 }
 
-.filters-left {
+.filters-left,
+.filter-right {
   width: 49%;
   display: flex;
+}
+
+.filters-left {
   justify-content: space-between;
 }
 
 .filter-right {
-  width: 49%;
-  display: flex;
   justify-content: flex-end;
 }
 /*
@@ -209,7 +194,7 @@ div.entry-content {
   display: none;
 }
 */
-/* Animations des filtres */
+/* Animations des filtres *//*
 
 #filter-category:hover,
 #filter-format:hover,
@@ -233,7 +218,18 @@ div.entry-content {
     outline: none;
     border-color: #A0A3AC;
 }
-/* Test CSS dropdown Animations des filtres 
+*/
+/* Test CSS dropdown Animations des filtres */
+
+.custom-filter .filter-list {
+  z-index: 1000; 
+  position: relative;
+  width: 260px;
+  height: 218px;
+  border-radius: 8px;
+  overflow-y: auto;
+  background-color: #FFFFFF;
+}
 
 .custom-filter .selected-option:hover {
   background-color: #FFD6D6;
@@ -258,7 +254,20 @@ div.entry-content {
   outline: none;
   border-color: #A0A3AC;
 }
-*/
+
+.custom-filter .filter-list {
+  display: none;
+}
+
+.selected-option img {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.selected-option.expanded img {
+  transform: rotate(180deg);
+}
+
 /* Vignette photo */
 
 .photo-item {
