@@ -27,9 +27,8 @@
 
         <section class="photo-catalog">
 
-        <div class="photo-filters">
+            <div class="photo-filters">
                 <div class="filters-left">
-
                     <div class="custom-filter" id="filter-category">
                         <div class="selected-option" role="button" aria-expanded="false">
                             <p>CATÉGORIES</p>
@@ -37,9 +36,9 @@
                         </div>
                         <div class="filter-list">
                             <div data-value="all">CATÉGORIES</div>
+                            <!-- Element chargés dynamiquement ici -->
                         </div>
                     </div>
-
                     <div class="custom-filter" id="filter-format">
                         <div class="selected-option" role="button" aria-expanded="false">
                             <p>FORMATS</p>
@@ -47,10 +46,10 @@
                         </div>
                         <div class="filter-list">
                             <div data-value="all">FORMATS</div>
+                            <!-- Element chargés dynamiquement ici -->
                         </div>
                     </div>
                 </div>
-
                 <div class="filter-right">
                     <div class="custom-filter" id="sort-date">
                         <div class="selected-option" role="button" aria-expanded="false">
@@ -58,34 +57,11 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/chevron.png" alt="flèche descendre">
                         </div>
                         <div class="filter-list">
-                            <div data-value="none">TRIER PAR</div>
-                            <div data-value="desc">Plus récentes</div>
-                            <div data-value="asc">Plus anciennes</div>
+                        <!-- Element chargés dynamiquement ici --> 
                         </div>
                     </div>
                 </div>
-
-            </div> 
-            <!--
-            <div class="photo-filters">
-                <div class="filters-left">
-                    <select id="filter-category">
-                        <option value="all">CATÉGORIES</option>
-                        
-                    </select>
-                    <select id="filter-format">
-                        <option value="all">FORMATS</option>
-                        
-                    </select>
-                </div>
-                <div class="filter-right">
-                    <select id="sort-date">
-                        <option value="none">TRIER PAR</option>
-                        <option value="desc">Plus récentes</option>
-                        <option value="asc">Plus anciennes</option>
-                    </select>
-                </div> 
-            </div> -->
+            </div>   
 
             <div id="photo-container">
                 <?php  // Tableau requête wp_query nombre de posts par page 
@@ -104,8 +80,8 @@
                 <?php get_template_part('template-parts/photo-block'); ?><!--Inclusion template partiel bloc photo-->
 
                 <!-- fin de la boucle -->
-                    <?php endwhile; ?> 
-                    <?php wp_reset_postdata(); ?>
+                <?php endwhile; ?> 
+                <?php wp_reset_postdata(); ?>
 
                 <?php else : ?> 
                     <p><?php _e( 'De nouvelles photos seront ajoutées prochainement 📷' ); ?></p>
