@@ -156,30 +156,16 @@ div.entry-content {
 /* filtres page accueil */
 
 .photo-filters {
-  height: 82px;
-  margin-right: 7.6vw;
-  margin-left: 7.6vw;
   display: flex;
   justify-content: space-between;
-  
-  #filter-category,
-  #filter-format,
-  #sort-date {
-    width: 260px;
-    height: 43px;
-    font-family: 'poppins', sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    border-radius: 8px;
-    border: 1.3px solid #B8BBC2;
-    padding-left: 18px;
-  }
+  margin-right: 7.6vw;
+  margin-left: 7.6vw;
+  height: 82px;
 }
 
-.filters-left,
-.filter-right {
-  width: 49%;
+.filters-left, .filter-right {
   display: flex;
+  width: 50%;
 }
 
 .filters-left {
@@ -188,63 +174,61 @@ div.entry-content {
 
 .filter-right {
   justify-content: flex-end;
-}
-/*
-.filter-list {  // Test changement filtres
-  display: none;
-}
-*/
-/* Animations des filtres *//*
+} 
 
-#filter-category:hover,
-#filter-format:hover,
-#sort-date:hover {
-    background-color: #FFD6D6;
-}
-
-#filter-category:active,
-#filter-format:active,
-#sort-date:active {
-    background-color: #FE5858;
-}
-
-.selected-filter {
-  border: 1.3px solid #215AFF !important;
-}
-
-#filter-category:focus, 
-#filter-format:focus, 
-#sort-date:focus {
-    outline: none;
-    border-color: #A0A3AC;
-}
-*/
-/* Test CSS dropdown Animations des filtres */
-
-.custom-filter .filter-list {
-  z-index: 1000; 
-  position: relative;
+// Styles pour le conteneur du filtre
+.custom-filter {
+  position: relative; 
   width: 260px;
-  height: 218px;
+  font-family: 'poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+
+.selected-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+  height: 43px;
+  padding-left: 18px;
   border-radius: 8px;
-  overflow-y: auto;
-  background-color: #FFFFFF;
-}
+  border: 1.3px solid #B8BBC2;
 
-.custom-filter .selected-option:hover {
-  background-color: #FFD6D6;
-}
+    img {
+      transition: transform 0.3s ease;
+    }
 
+    &.expanded img {
+      transform: rotate(180deg);
+    }
+  }
+
+  .filter-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 218px;
+    border-radius: 0 0 8px 8px;
+    overflow-y: auto;
+    background-color: #FFFFFF;
+    display: none;
+  }
+}
+/* Animations 3 couleurs des éléments des filtres*/
 .custom-filter .filter-list div:hover {
   background-color: #FFD6D6;
 }
 
-.custom-filter .selected-option:active,
+.custom-filter .selected-option:active {
+  background-color: transparent;
+}
+
 .custom-filter .filter-list div:active {
   background-color: #FE5858;
 }
 
-.custom-filter .selected-option.selected,
 .custom-filter .filter-list div.selected {
   background-color: #E00000;
 }
@@ -255,17 +239,8 @@ div.entry-content {
   border-color: #A0A3AC;
 }
 
-.custom-filter .filter-list {
-  display: none;
-}
-
-.selected-option img {
-  transform: rotate(0deg);
-  transition: transform 0.3s ease;
-}
-
-.selected-option.expanded img {
-  transform: rotate(180deg);
+.active-filter .selected-option {
+  border: 1.3px solid #215aff;
 }
 
 /* Vignette photo */
@@ -327,7 +302,7 @@ div.entry-content {
     /* Titre & Catégorie photo dans "Agrandir" */
     #lightbox-info {
       display: flex;
-      position: absolute;  // pos relatif à #lightbox-container
+      position: absolute;  
       bottom: -3%;  
       left: 35%;
       right: 35%;
