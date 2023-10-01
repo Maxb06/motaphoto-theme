@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
             data.forEach(function(category) {
                 categoryList.append(`<div data-value="${category.id}">${category.name}</div>`);
             });
-            bindFilterEvents(); // Ajout fonction pour lier les événements après avoir ajouté des éléments au DOM
+            bindFilterEvents(); // Ajout fonction pour lier les events après avoir ajouté des éléments au DOM
         }
     });
 
@@ -35,12 +35,28 @@ jQuery(document).ready(function($) {
         }
     });
 
+    // Chargement dynamique des dates
+    $.ajax({
+        url: load_more_params.ajax_url,
+        data: { action: 'load_date_options' },
+        success: function(response) {
+            const data = JSON.parse(response);
+            const dateList = $('#sort-date .filter-list');
+            data.forEach(function(option) {
+                dateList.append(`<div data-value="${option.value}">${option.label}</div>`);
+            });
+            bindFilterEvents(); 
+        }
+    });
+    
     function bindFilterEvents() {
         $(".custom-filter .filter-list div").on('click', function() {
             const $filter = $(this).closest(".custom-filter");
             const $selectedOption = $filter.find(".selected-option p");
             const selectedValue = $(this).data('value');
         
+            page = 1;
+
             if (selectedValue === "all" || selectedValue === "none") {
                 $selectedOption.text(filterNames[$filter.attr('id')]);
                 $filter.attr('data-selected-value', selectedValue);
@@ -54,10 +70,10 @@ jQuery(document).ready(function($) {
             $(this).addClass('selected');
             
             // Chargement filtré des photos
-            loadFilteredPhotos();
+            loadFilteredPhotos(false);
             
             // Réinitialise la mise en évidence des filtres et sélectionne le filtre actuel
-           // $('.custom-filter').removeClass('active-filter');
+            $('.custom-filter').removeClass('active-filter'); // a voir si je garde ou pas
             $filter.addClass('active-filter');
         });
     }   
@@ -112,4 +128,3 @@ jQuery(document).ready(function($) {
         loadFilteredPhotos(true); // active mode Append
     });
 });
-
