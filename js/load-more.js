@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
             // Chargement filtré des photos
             loadFilteredPhotos();
             
-            // Réinitialise la mise en évidence pour tous les filtres et sélectionne le filtre actuel
+            // Réinitialise la mise en évidence des filtres et sélectionne le filtre actuel
            // $('.custom-filter').removeClass('active-filter');
             $filter.addClass('active-filter');
         });
