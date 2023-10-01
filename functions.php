@@ -94,7 +94,21 @@ function load_formats() {
 add_action('wp_ajax_load_formats', 'load_formats');
 add_action('wp_ajax_nopriv_load_formats', 'load_formats');
 
+/* chargement dynamique des dates */
+function load_date_options() {
+  $options = array(
+      array('value' => 'none', 'label' => 'TRIER PAR'),
+      array('value' => 'desc', 'label' => 'Plus récentes'),
+      array('value' => 'asc', 'label' => 'Plus anciennes')
+  );
+  
+  echo json_encode($options);
+  wp_die();
+}
+add_action('wp_ajax_load_date_options', 'load_date_options');
+add_action('wp_ajax_nopriv_load_date_options', 'load_date_options');
 
+/* fonction filtres et date photographie */
 function filter_and_sort_photos() {
   $paged = isset($_POST['page']) ? $_POST['page'] : 1;
   $category = isset($_POST['category']) ? $_POST['category'] : '';
