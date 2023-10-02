@@ -46,7 +46,6 @@ function load_more () {
 
     die();
 }
-
 add_action('wp_ajax_load_more', 'load_more');
 add_action('wp_ajax_nopriv_load_more', 'load_more');
 
@@ -87,12 +86,13 @@ function load_formats() {
           'name' => $format->name,
       ];
   }
-
+  
   echo json_encode($output);
   die();
 }
 add_action('wp_ajax_load_formats', 'load_formats');
 add_action('wp_ajax_nopriv_load_formats', 'load_formats');
+
 
 /* chargement dynamique des dates */
 function load_date_options() {
@@ -107,6 +107,7 @@ function load_date_options() {
 }
 add_action('wp_ajax_load_date_options', 'load_date_options');
 add_action('wp_ajax_nopriv_load_date_options', 'load_date_options');
+
 
 /* fonction filtres et date photographie */
 function filter_and_sort_photos() {
