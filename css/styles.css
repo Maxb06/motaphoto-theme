@@ -228,7 +228,7 @@ div.entry-content {
   padding-left: 16px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .photo-filters {
     display: flex;
     flex-direction: column;
@@ -237,7 +237,7 @@ div.entry-content {
     height: auto;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .filters-left {
     display: flex;
     flex-direction: column;
@@ -245,14 +245,14 @@ div.entry-content {
     height: auto;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   #photo-container {
     display: flex;
     flex-direction: column;
   }
   #photo-container img {
-    width: 90vw;
-    height: 50vh;
+    width: 80vw;
+    height: 45vh;
   }
 }
 /* Animations 3 couleurs des éléments des filtres*/

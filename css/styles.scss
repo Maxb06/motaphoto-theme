@@ -254,7 +254,7 @@ div.entry-content {
   }
 }
 
-@media (max-width:1024px) {    // @media Filtres Responsive 
+@media (max-width:1025px) {    // @media Filtres Responsive 
   .photo-filters {
     display: flex;
     flex-direction: column;
@@ -264,7 +264,7 @@ div.entry-content {
   }
 }
 
-@media (max-width:1024px) {
+@media (max-width:1025px) {
   .filters-left{
     display: flex;
     flex-direction: column;
@@ -273,13 +273,13 @@ div.entry-content {
   }
 }
 
-@media (max-width:1024px) {
+@media (max-width:1025px) {
   #photo-container {
     display: flex;
     flex-direction: column;
      img {
-      width: 90vw;
-      height: 50vh;
+      width: 80vw;
+      height: 45vh;
      }
   }
 }
