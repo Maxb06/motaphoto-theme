@@ -110,12 +110,33 @@ p {
             color: var(--noir-100);
             font-family: Space Mono;
             font-size: 16px;
+            //font-weight: 400;
           }
         }
       }
     }
   }
 
+/* Animation éléments du menu */
+.menu {
+  a {
+    transition: all 0.5s;
+  
+    &:hover {
+      font-weight: 700;
+    }
+  
+    &:before,
+    &:after {
+      transition: all 0.5s; 
+    }
+  
+    &:before {
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+}
+  
 /* marge sup pages : à propos, vie privée et mentions légales */
 
 div.entry-content {
@@ -441,23 +462,16 @@ div.entry-content {
   font-family: 'Space Mono';
   border-radius: 2px;
   border: none;
-  -webkit-transition: all 0.7s;
-	-moz-transition: all 0.7s;
 	transition: all 0.7s;
-    &:hover {
-      background-color: #000;
-      color: #fff;
-    }
-}
+    
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
 
-#load-more-button:after {
-  -webkit-transition: all 0.7s;
-  -moz-transition: all 0.7s;
-  transition: all 0.7s;       
-}
-
-#load-more-button:before {
--webkit-font-smoothing: antialiased;
+  &:before {
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 /* Page photographie */
@@ -587,24 +601,17 @@ button {
   font-family: Space Mono;
   font-size: 12px;
   cursor: pointer;
-  -webkit-transition: all 0.7s;
-	-moz-transition: all 0.7s;
 	transition: all 0.7s;
+    
     &:hover {
-      background-color: #000;
-      color: #fff;
+    background-color: #000;
+    color: #fff;
+    }
+
+    &:before {
+    -webkit-font-smoothing: antialiased;
     }
   }
-}
-
-.contactButton:after {
-  -webkit-transition: all 0.7s;
-  -moz-transition: all 0.7s;
-  transition: all 0.7s;       
-}
-
-.contactButton:before {
-	-webkit-font-smoothing: antialiased;
 }
 
 .title-related-photos {

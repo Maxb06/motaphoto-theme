@@ -107,6 +107,20 @@ p {
   font-size: 16px;
 }
 
+/* Animation éléments du menu */
+.menu a {
+  transition: all 0.5s;
+}
+.menu a:hover {
+  font-weight: 700;
+}
+.menu a:before, .menu a:after {
+  transition: all 0.5s;
+}
+.menu a:before {
+  -webkit-font-smoothing: antialiased;
+}
+
 /* marge sup pages : à propos, vie privée et mentions légales */
 div.entry-content {
   margin-top: 100px;
@@ -405,21 +419,12 @@ div.entry-content {
   font-family: "Space Mono";
   border-radius: 2px;
   border: none;
-  -webkit-transition: all 0.7s;
-  -moz-transition: all 0.7s;
   transition: all 0.7s;
 }
 #load-more-button:hover {
   background-color: #000;
   color: #fff;
 }
-
-#load-more-button:after {
-  -webkit-transition: all 0.7s;
-  -moz-transition: all 0.7s;
-  transition: all 0.7s;
-}
-
 #load-more-button:before {
   -webkit-font-smoothing: antialiased;
 }
@@ -554,22 +559,13 @@ button.contactButton {
   font-family: Space Mono;
   font-size: 12px;
   cursor: pointer;
-  -webkit-transition: all 0.7s;
-  -moz-transition: all 0.7s;
   transition: all 0.7s;
 }
 button.contactButton:hover {
   background-color: #000;
   color: #fff;
 }
-
-.contactButton:after {
-  -webkit-transition: all 0.7s;
-  -moz-transition: all 0.7s;
-  transition: all 0.7s;
-}
-
-.contactButton:before {
+button.contactButton:before {
   -webkit-font-smoothing: antialiased;
 }
 
