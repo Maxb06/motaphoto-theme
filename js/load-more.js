@@ -72,7 +72,7 @@ jQuery(document).ready(function($) {
             loadFilteredPhotos(false);
             
             // Réinitialise la mise en évidence des filtres et sélectionne le filtre actuel
-            $('.custom-filter').removeClass('active-filter'); // a voir si je garde ou pas
+            $('.custom-filter').removeClass('active-filter');// suppr pour avoir bordure bleue ts les filtres
             $filter.addClass('active-filter');
         });
     }   
