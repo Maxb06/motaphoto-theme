@@ -108,9 +108,8 @@ p {
           a {
             text-decoration: none;
             color: var(--noir-100);
-            font-family: Space Mono;
+            font-family: 'Space Mono';
             font-size: 16px;
-            //font-weight: 400;
           }
         }
       }
@@ -695,7 +694,7 @@ button {
 .wpcf7-form input[type="email"] {
   width: 263px;        // Taille à définir
   height: 40px;         // Taille à définir
-  margin-bottom: 20px;   // Taille à définir
+  margin-bottom: 20px;  
 }
 
 .wpcf7-form textarea {

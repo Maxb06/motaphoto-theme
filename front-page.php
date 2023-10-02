@@ -26,7 +26,6 @@
         </section>
 
         <section class="photo-catalog">
-
             <div class="photo-filters">
                 <div class="filters-left">
                     <div class="custom-filter" id="filter-category">
