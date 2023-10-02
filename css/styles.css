@@ -174,8 +174,8 @@ div.entry-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 96%;
-  height: 43px;
+  width: 96.5%;
+  height: 42px;
   padding-left: 18px;
   padding-right: 18px;
   border-radius: 8px;
@@ -200,21 +200,41 @@ div.entry-content {
   top: 100%;
   left: 0;
   z-index: 1000;
-  width: 100%;
-  height: 218px;
+  width: 96.5%;
+  height: auto;
   border-radius: 0 0 8px 8px;
   overflow-y: auto;
   background-color: #FFFFFF;
   display: none;
 }
+.custom-filter .filter-list div {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
 
+@media (max-width: 1024px) {
+  .photo-filters {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    gap: 10px;
+    border: 2px solid green;
+    height: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .filters-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+}
 /* Animations 3 couleurs des éléments des filtres*/
 .custom-filter .filter-list div:hover {
   background-color: #FFD6D6;
-}
-
-.custom-filter .selected-option:active {
-  background-color: transparent;
 }
 
 .custom-filter .filter-list div:active {
