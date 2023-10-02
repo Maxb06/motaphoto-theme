@@ -4,8 +4,8 @@
         <img id="lightbox-image" src="" alt="Lightbox image" />
 
         <div id="lightbox-info">
-            <p id="lightbox-title"></p>
             <p id="lightbox-reference"></p>
+            <p id="lightbox-title"></p>
         </div>
 
         <div id="lightbox-controls">
