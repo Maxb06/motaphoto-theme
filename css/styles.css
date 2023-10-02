@@ -183,6 +183,14 @@ div.entry-content {
 .custom-filter .selected-option img {
   transition: transform 0.3s ease;
 }
+.custom-filter .selected-option p {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 3%;
+  text-transform: uppercase;
+}
 .custom-filter .selected-option.expanded img {
   transform: rotate(180deg);
 }
