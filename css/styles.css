@@ -594,11 +594,6 @@ button.contactButton:before {
   margin-top: 10px;
 }
 
-.next,
-.previous {
-  color: #51515d;
-}
-
 /* Modale Contact */
 #contactModal {
   display: none;
