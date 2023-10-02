@@ -405,10 +405,23 @@ div.entry-content {
   font-family: "Space Mono";
   border-radius: 2px;
   border: none;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  transition: all 0.7s;
 }
 #load-more-button:hover {
   background-color: #000;
   color: #fff;
+}
+
+#load-more-button:after {
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+#load-more-button:before {
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Page photographie */
@@ -541,10 +554,23 @@ button.contactButton {
   font-family: Space Mono;
   font-size: 12px;
   cursor: pointer;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  transition: all 0.7s;
 }
 button.contactButton:hover {
   background-color: #000;
   color: #fff;
+}
+
+.contactButton:after {
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.contactButton:before {
+  -webkit-font-smoothing: antialiased;
 }
 
 .title-related-photos {
