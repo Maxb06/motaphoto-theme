@@ -54,7 +54,6 @@ jQuery(document).ready(function($) {
             const $filter = $(this).closest(".custom-filter");
             const $selectedOption = $filter.find(".selected-option p");
             const selectedValue = $(this).data('value');
-        
             page = 1;
 
             if (selectedValue === "all" || selectedValue === "none") {
@@ -69,7 +68,7 @@ jQuery(document).ready(function($) {
             $(this).siblings().removeClass('selected');
             $(this).addClass('selected');
             
-            // Chargement filtré des photos
+            // Chargement filtré des photos - appenmode
             loadFilteredPhotos(false);
             
             // Réinitialise la mise en évidence des filtres et sélectionne le filtre actuel

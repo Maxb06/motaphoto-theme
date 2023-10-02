@@ -180,7 +180,7 @@ div.entry-content {
 .custom-filter {
   position: relative; 
   width: 260px;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 12px;
 
@@ -191,6 +191,7 @@ div.entry-content {
   width: 96%;
   height: 43px;
   padding-left: 18px;
+  padding-right: 18px;
   border-radius: 8px;
   border: 1.3px solid #B8BBC2;
 
@@ -244,7 +245,6 @@ div.entry-content {
 
 .custom-filter .selected-option:focus, 
 .custom-filter .filter-list div:focus {
-  outline: none;
   border-color: #A0A3AC;
 }
 
