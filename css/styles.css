@@ -143,6 +143,7 @@ div.entry-content {
 .photo-event {
   position: absolute;
   width: 55vw;
+  max-width: 100%;
   height: auto;
 }
 
@@ -171,6 +172,7 @@ div.entry-content {
 
 .filters-left {
   justify-content: space-between;
+  margin-right: 20px;
 }
 
 .filter-right {
@@ -179,7 +181,6 @@ div.entry-content {
 
 .custom-filter {
   position: relative;
-  width: 260px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -188,7 +189,7 @@ div.entry-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 96.5%;
+  width: 260px;
   height: 42px;
   padding-left: 18px;
   padding-right: 18px;
@@ -214,7 +215,7 @@ div.entry-content {
   top: 100%;
   left: 0;
   z-index: 1000;
-  width: 96.5%;
+  width: 100%;
   height: auto;
   border-radius: 0 0 8px 8px;
   overflow-y: auto;
@@ -243,6 +244,12 @@ div.entry-content {
     flex-direction: column;
     gap: 10px;
     height: auto;
+  }
+}
+@media (max-width: 1025px) {
+  .filter-right {
+    display: flex;
+    justify-content: flex-start;
   }
 }
 @media (max-width: 1025px) {
