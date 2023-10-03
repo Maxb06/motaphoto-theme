@@ -284,6 +284,7 @@ div.entry-content {
   width: 564px;
   height: 495px;
   position: relative;
+  box-sizing: border-box;
 }
 .photo-item img {
   width: 100%;
@@ -492,17 +493,6 @@ div.entry-content {
   object-fit: cover;
 }
 
-/* Enlever les flèches agrandir photo */
-#prev-button, #next-button {
-  display: block;
-}
-
-/* L'icone agrandir */
-.photo-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
 .bottom-column {
   margin-left: 7.6vw;
   margin-right: 7.6vw;
@@ -527,6 +517,25 @@ div.entry-content {
 .contact-link p {
   display: flex;
   align-items: center;
+}
+
+button.contactButton {
+  width: 272px;
+  height: 50px;
+  padding: 8px 15px;
+  background-color: var(--Gris-medium);
+  border: none;
+  font-family: Space Mono;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+button.contactButton:hover {
+  background-color: #000;
+  color: #fff;
+}
+button.contactButton:before {
+  -webkit-font-smoothing: antialiased;
 }
 
 .bottom-column-right {
@@ -559,25 +568,6 @@ div.entry-content {
   right: 0;
 }
 
-button.contactButton {
-  width: 272px;
-  height: 50px;
-  padding: 8px 15px;
-  background-color: var(--Gris-medium);
-  border: none;
-  font-family: Space Mono;
-  font-size: 12px;
-  cursor: pointer;
-  transition: all 0.7s;
-}
-button.contactButton:hover {
-  background-color: #000;
-  color: #fff;
-}
-button.contactButton:before {
-  -webkit-font-smoothing: antialiased;
-}
-
 .title-related-photos {
   margin-bottom: 52px;
   margin-top: 70px;
@@ -587,10 +577,13 @@ button.contactButton:before {
 /* les 2 photos associées */
 .container-photos {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 7.6vw;
+  margin-left: 7.6vw;
   gap: 20px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .container-photos {
     flex-direction: column;
   }
@@ -601,6 +594,17 @@ button.contactButton:before {
   justify-content: center;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+
+/* Enlever les flèches agrandir photo */
+#prev-button, #next-button {
+  display: block;
+}
+
+/* L'icone agrandir */
+.photo-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
 /* Modale Contact */

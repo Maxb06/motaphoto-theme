@@ -315,6 +315,7 @@ div.entry-content {
   width: 564px;   
   height: 495px;    
   position: relative;
+  box-sizing: border-box;
   
   img {
     width: 100%;
@@ -534,15 +535,6 @@ div.entry-content {
     object-fit: cover;
   }
 }
-/* Enlever les flèches agrandir photo */
-#prev-button, #next-button {  
-  display: block;
-}
-/* L'icone agrandir */
-.photo-wrapper {  
-  position: relative;
-  overflow: hidden; 
-}
 
 .bottom-column {
   margin-left: 7.6vw;   
@@ -568,6 +560,29 @@ div.entry-content {
       display: flex;
       align-items: center;
     }
+}
+
+button {                  // Verifier cette partie de code BTN CONTACT
+  &.contactButton {
+  width: 272px;    // Taille à définir
+  height: 50px;    // Taille à définir
+  padding: 8px 15px;  
+  background-color: var(--Gris-medium);
+  border: none;
+  font-family: Space Mono;
+  font-size: 12px;
+  cursor: pointer;
+	transition: all 0.7s;
+    
+    &:hover {
+    background-color: #000;
+    color: #fff;
+    }
+
+    &:before {
+    -webkit-font-smoothing: antialiased;
+    }
+  }
 }
 
 .bottom-column-right {
@@ -600,29 +615,6 @@ div.entry-content {
   right: 0;
 } 
 
-button {
-  &.contactButton {
-  width: 272px;    // Taille à définir
-  height: 50px;    // Taille à définir
-  padding: 8px 15px;  
-  background-color: var(--Gris-medium);
-  border: none;
-  font-family: Space Mono;
-  font-size: 12px;
-  cursor: pointer;
-	transition: all 0.7s;
-    
-    &:hover {
-    background-color: #000;
-    color: #fff;
-    }
-
-    &:before {
-    -webkit-font-smoothing: antialiased;
-    }
-  }
-}
-
 .title-related-photos {
   margin-bottom: 52px;
   margin-top: 70px;      
@@ -630,20 +622,34 @@ button {
 }
 
 /* les 2 photos associées */
-.container-photos { 
+.container-photos {
   display: flex;
-  justify-content: center;
-  gap: 20px;         
-      @media (max-width: 1024px) {         // Responsive 2 photos bas de page
-        flex-direction : column;
-      }
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 7.6vw;
+  margin-left: 7.6vw;
+  gap: 20px;
+
+  @media (max-width: 1025px) { 
+    flex-direction: column;
+  }
 }
 
-.related-btn {
+.related-btn {          // Verifier cette partie de code BTN CONTACT
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+
+/* Enlever les flèches agrandir photo */
+#prev-button, #next-button {  
+  display: block;
+}
+/* L'icone agrandir */
+.photo-wrapper {  
+  position: relative;
+  overflow: hidden; 
 }
 
 /* Modale Contact */
