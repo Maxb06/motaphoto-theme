@@ -92,9 +92,11 @@ while ( have_posts() ) :
 				<h3>Vous aimerez aussi</h3>
 			</div>
 			
-			<?php // ARRAY requête wp_query pour les 2 photos images apparentées selon leur catégorie
+			<?php // ARRAY requête wp_query pour les 2 photos apparentées selon leur catégorie
 				$current_post_id = get_the_ID();
-				$categories = wp_get_post_terms( $current_post_id, 'categorie-photo', array( 'fields' => 'ids' ) );
+				$categories_ids = wp_get_post_terms($current_post_id, 'categorie-photo', array('fields' => 'ids'));
+				$primary_category_id = $categories_ids ? $categories_ids[0] : ''; // prend le 1er ID si plusieurs sont retournés
+
 				$args = array(
 					'post_type' => 'photographie',
 					'post__not_in' => array( $current_post_id ),
@@ -102,12 +104,15 @@ while ( have_posts() ) :
 						array(
 							'taxonomy' => 'categorie-photo',
 							'field'    => 'id',
-							'terms'    => $categories,
+							'terms'    => $primary_category_id,
 						),
 					),
 					'posts_per_page' => 2,  // Nombre de photos à afficher
+					'orderby' => 'date',
+    				'order' => 'DESC'
 				);
-				$related_photos = new WP_Query( $args );
+
+				$related_photos = new WP_Query( $args );			
 			?>
 
 			<div class="related-photos"> <!-- Les 2 vignettes photos --> 
@@ -127,7 +132,7 @@ while ( have_posts() ) :
 				</div>
 			</div>
 			<div class="related-btn">
-                <button id="load-more-button">Toutes les photos</button>
+                <button id="load-more-button" data-category="<?php echo esc_attr($primary_category_id); ?>">Toutes les photos</button>
             </div>
 		</div>					
 	</div>
