@@ -108,8 +108,6 @@ while ( have_posts() ) :
 						),
 					),
 					'posts_per_page' => 2,  // Nombre de photos à afficher
-					'orderby' => 'date',
-    				'order' => 'DESC'
 				);
 
 				$related_photos = new WP_Query( $args );			
