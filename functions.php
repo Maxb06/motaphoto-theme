@@ -12,20 +12,13 @@ function enqueue_my_scripts() {
   wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0', true );
   wp_enqueue_script( 'load-more', get_template_directory_uri() . '/js/load-more.js', array('jquery'), '1.0', true );
   wp_enqueue_script('lightbox', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), '1.0', true);
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_my_scripts' );
-
-
-/* Enqueue Ajax 'load-more.js' charger plus */
-function enqueue_load_more_script() {
-  wp_enqueue_script('load-more', get_template_directory_uri() . '/js/load-more.js', ['jquery'], null, true);
-
+  
+  // Intégration de wp_localize_script
   wp_localize_script('load-more', 'load_more_params', [
       'ajax_url' => admin_url('admin-ajax.php')
   ]);
 }
-add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
-
+add_action( 'wp_enqueue_scripts', 'enqueue_my_scripts' );
 
 /* fonction pour traiter la requête Ajax */
 function load_more () {
@@ -160,6 +153,39 @@ if ($format && $format !== 'all') {
 }
 add_action('wp_ajax_filter_and_sort', 'filter_and_sort_photos');
 add_action('wp_ajax_nopriv_filter_and_sort', 'filter_and_sort_photos');
+
+
+/* Requête pour les photos de la même catégorie btn "Charger plus" page photo */
+function load_more_category_photos_callback() {
+  $category_id = isset($_POST['category_id']) ? intval($_POST['category_id']) : 0;
+  $offset = isset($_POST['offset']) ? intval($_POST['offset']) : 3;  // Charge à partir de la 4ème photo
+
+  $args = array(
+      'post_type' => 'photographie',
+      'offset' => $offset,
+      'tax_query' => array(
+          array(
+              'taxonomy' => 'categorie-photo',
+              'field' => 'term_id',
+              'terms' => $category_id,
+          ),
+      ),
+      'posts_per_page' => 12, 
+  );
+
+  $query = new WP_Query($args);
+
+  if ($query->have_posts()) {
+      while ($query->have_posts()) {
+          $query->the_post();
+          get_template_part('template-parts/photo-block');
+      }
+  }
+
+  wp_die(); 
+}
+add_action('wp_ajax_load_more_category_photos', 'load_more_category_photos_callback');
+add_action('wp_ajax_nopriv_load_more_category_photos', 'load_more_category_photos_callback');
 
 
 /* Nav menu */
