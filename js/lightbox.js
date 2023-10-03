@@ -1,3 +1,5 @@
+/* Lightbox vignettes photos accueil et page photo */
+
 jQuery(document).ready(function($) {
     // Ouvrir la lightbox
     $('body').on('click', '.open-lightbox', function() {
