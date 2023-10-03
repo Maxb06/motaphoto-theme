@@ -493,6 +493,17 @@ div.entry-content {
   object-fit: cover;
 }
 
+/* Enlever les flèches agrandir photo */
+#prev-button, #next-button {
+  display: block;
+}
+
+/* L'icone agrandir */
+.photo-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 .bottom-column {
   margin-left: 7.6vw;
   margin-right: 7.6vw;
@@ -594,17 +605,6 @@ button.contactButton:before {
   justify-content: center;
   margin-bottom: 10px;
   margin-top: 10px;
-}
-
-/* Enlever les flèches agrandir photo */
-#prev-button, #next-button {
-  display: block;
-}
-
-/* L'icone agrandir */
-.photo-wrapper {
-  position: relative;
-  overflow: hidden;
 }
 
 /* Modale Contact */

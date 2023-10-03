@@ -316,7 +316,7 @@ div.entry-content {
   height: 495px;    
   position: relative;
   box-sizing: border-box;
-  
+
   img {
     width: 100%;
     height: 100%;
@@ -536,6 +536,16 @@ div.entry-content {
   }
 }
 
+/* Enlever les flèches agrandir photo */
+#prev-button, #next-button {  
+  display: block;
+}
+/* L'icone agrandir */
+.photo-wrapper {  
+  position: relative;
+  overflow: hidden; 
+}
+
 .bottom-column {
   margin-left: 7.6vw;   
   margin-right: 7.6vw;  
@@ -562,7 +572,7 @@ div.entry-content {
     }
 }
 
-button {                  // Verifier cette partie de code BTN CONTACT
+button {                  
   &.contactButton {
   width: 272px;    // Taille à définir
   height: 50px;    // Taille à définir
@@ -635,21 +645,11 @@ button {                  // Verifier cette partie de code BTN CONTACT
   }
 }
 
-.related-btn {          // Verifier cette partie de code BTN CONTACT
+.related-btn {          
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
   margin-top: 10px;
-}
-
-/* Enlever les flèches agrandir photo */
-#prev-button, #next-button {  
-  display: block;
-}
-/* L'icone agrandir */
-.photo-wrapper {  
-  position: relative;
-  overflow: hidden; 
 }
 
 /* Modale Contact */
