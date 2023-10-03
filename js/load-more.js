@@ -1,3 +1,5 @@
+/* Chargement des photos & tri filtres page d'accueil */
+
 jQuery(document).ready(function($) {
     let page = 1;
 
@@ -126,4 +128,36 @@ jQuery(document).ready(function($) {
         page++;
         loadFilteredPhotos(true); // active mode Append
     });
+});
+
+/* Bouton "Charger plus" page single-photographie */
+jQuery(document).ready(function($) {
+    let offset = 3;  // Charge à partir de la 4ème photo
+    const perPage = 12;
+    const container = $(".container-photos");
+    const loadMoreButton = $("#load-more-button");
+
+    loadMoreButton.on("click", function() {
+        const categoryId = $(this).data('category');
+        loadMoreCategoryPhotos(categoryId, offset);
+        offset += perPage;
+    });
+
+    function loadMoreCategoryPhotos(categoryId, offset) {
+        $.ajax({
+            url: load_more_params.ajax_url,
+            type: 'post',
+            data: {
+                action: 'load_more_category_photos',
+                category_id: categoryId,
+                offset: offset
+            },
+            success: function(response) {
+                container.append(response);
+            },
+            error: function() {
+                // Gére ici les erreurs si besoin
+            }
+        });
+    }
 });
