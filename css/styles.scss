@@ -473,7 +473,7 @@ div.entry-content {
   border-radius: 2px;
   border: none;
 	transition: all 0.7s;
-    
+  
   &:hover {
     background-color: #000;
     color: #fff;
@@ -583,7 +583,8 @@ button {
   font-size: 12px;
   cursor: pointer;
 	transition: all 0.7s;
-    
+  border-radius: 2px;  
+
     &:hover {
     background-color: #000;
     color: #fff;

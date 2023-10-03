@@ -540,6 +540,7 @@ button.contactButton {
   font-size: 12px;
   cursor: pointer;
   transition: all 0.7s;
+  border-radius: 2px;
 }
 button.contactButton:hover {
   background-color: #000;
