@@ -686,6 +686,16 @@ button.contactButton:before {
 
 .wpcf7-submit {
   cursor: pointer;
+  border-radius: 2px !important;
+  border: none;
+  transition: all 0.7s;
+}
+.wpcf7-submit:hover {
+  background-color: #000 !important;
+  color: #fff;
+}
+.wpcf7-submit:before {
+  -webkit-font-smoothing: antialiased;
 }
 
 .wpcf7-form .last-element {
