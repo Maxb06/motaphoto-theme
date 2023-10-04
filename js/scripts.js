@@ -54,3 +54,51 @@ jQuery(document).ready(function($) {
         }
     );
 });
+
+// Gestion ouverture/fermeture Menu Burger
+jQuery(document).ready(function($) {
+
+  // Affiche/Cache le menu selon la largeur de la fenêtre
+  function toggleMenuBasedOnWidth() {
+      if ($(window).width() <= 1025) {
+          $("#site-navigation:not(.toggled)").hide();
+          $(".menu-toggle").show();
+      } else {
+          $("#site-navigation").show();
+          $(".menu-toggle, .close-menu").hide();
+      }
+  }
+
+  // Initialisation
+  toggleMenuBasedOnWidth();
+
+  // Toggle du menu burger
+  $(".menu-toggle").on('click', function() {
+      $("#site-navigation").show().addClass("toggled");
+      $(".menu-toggle").hide();
+      $(".close-menu").show();
+      $("body").addClass("menu-open");
+  });
+
+  // Fermeture du menu
+  $(".close-menu").on('click', function() {
+      $("#site-navigation").hide().removeClass("toggled");
+      $(".menu-toggle").show();
+      $(".close-menu").hide();
+      $("body").removeClass("menu-open");
+  });
+
+  // Fermeture du menu quand un élément est cliqué
+  $("#site-navigation ul li a").on('click', function() {
+      if ($(window).width() <= 1025) {
+          $("#site-navigation").hide().removeClass("toggled");
+          $(".menu-toggle").show();
+          $(".close-menu").hide();
+          $("body").removeClass("menu-open");
+      }
+  });
+
+  // Ecouteur sur le redimensionnement de la fenêtre
+  $(window).resize(toggleMenuBasedOnWidth);
+
+});
