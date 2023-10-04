@@ -734,6 +734,18 @@ button {
 
 .wpcf7-submit {
   cursor: pointer;
+  border-radius: 2px !important;
+  border: none;
+	transition: all 0.7s;
+  
+  &:hover {
+    background-color: #000 !important;
+    color: #fff;
+  }
+
+  &:before {
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 .wpcf7-form .last-element {
