@@ -16,7 +16,13 @@
         <header>
             <div class="header-menu">
                 <a href="http://motaphoto.local/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo.png" alt="Logo du site"></a>
-                <nav>
+                <button class="menu-toggle">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-menu.png" alt="Ouvrir le menu">
+                </button>
+                <button class="close-menu">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/close-menu.png" alt="Fermer le menu">
+                </button>
+                <nav id="site-navigation">
                     <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
                 </nav>
             </div>
