@@ -55,7 +55,8 @@ jQuery(document).ready(function($) {
     );
 });
 
-// Gestion ouverture/fermeture Menu Burger
+/* Gestion ouverture/fermeture Menu Burger */
+
 jQuery(document).ready(function($) {
 
   // Affiche/Cache le menu selon la largeur de la fenêtre
