@@ -9,9 +9,9 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -20,9 +20,9 @@ html, body {
 }
 
 #page {
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* Polices du site */
@@ -615,8 +615,7 @@ div.entry-content {
 /* MQ Vignettes*/ 
 @media (max-width: 1024px) {
   .photo-catalog {
-    width: 100vw;
-    border: 2px solid red;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -625,7 +624,7 @@ div.entry-content {
   
   .photo-item {
     width: 100%;
-    height: 80vh; 
+    height: 100%; 
     box-sizing: border-box;
     background-size: cover;
   }
