@@ -247,17 +247,20 @@ div.entry-content {
   justify-content: center;
   align-items: center;
   max-width: 1440px;
-  width: 100vw;
+  width: 93.5vw;
   height: 100vh;
   background-size: cover;
   background-position: center;
 }
 
 .photo-event {
-  position: absolute;
-  width: 55vw;
-  max-width: 100%;
-  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    img {
+      width: 55vw;
+      height: auto;
+    }
 }
 
 /* Page d'accueil */
