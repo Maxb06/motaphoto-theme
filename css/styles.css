@@ -131,8 +131,9 @@ p {
 @media (max-width: 1024px) {
   #main-content {
     margin-top: 80px;
-    height: calc(100vh - 80px);
+    height: 100vh;
     overflow: auto;
+    box-sizing: border-box;
   }
   .header-menu {
     position: fixed;
@@ -142,6 +143,20 @@ p {
     height: 80px;
     width: 100vw;
     box-sizing: border-box;
+    background-color: #fff;
+  }
+  .header-menu #menu-header-menu {
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+  }
+  .header-menu #menu-header-menu li {
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    justify-content: center;
   }
   .menu-toggle {
     display: block;
@@ -150,9 +165,6 @@ p {
     display: none;
     background-color: #E00000;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
     width: 100vw;
   }
   #site-navigation.toggled {
@@ -164,9 +176,6 @@ p {
     right: 0;
     bottom: 0;
     z-index: 1010;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
   }
   #site-navigation.toggled ul li a {
     font-weight: 400;
@@ -238,7 +247,11 @@ div.entry-content {
 /* Media queries hero header */
 @media (max-width: 1024px) {
   .hero-header {
+    width: 100vw;
     height: 50vh;
+    box-sizing: border-box;
+    background-size: cover;
+    margin-bottom: 35px;
   }
   .photo-event img {
     width: 70%;
@@ -331,26 +344,21 @@ div.entry-content {
   .photo-filters {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5%;
+    margin-bottom: 40px;
     gap: 10px;
     height: auto;
+    justify-content: center;
   }
-}
-@media (max-width: 1024px) {
   .filters-left {
     display: flex;
     flex-direction: column;
     gap: 10px;
     height: auto;
   }
-}
-@media (max-width: 1024px) {
   .filter-right {
     display: flex;
     justify-content: flex-start;
   }
-}
-@media (max-width: 1024px) {
   #photo-container {
     display: flex;
     flex-direction: column;
@@ -382,7 +390,7 @@ div.entry-content {
   border: 1.3px solid #215aff;
 }
 
-/* Vignette photo */
+/* Vignettes photos */
 .photo-item {
   flex-basis: calc(50% - 10px);
   margin-bottom: 20px;
@@ -819,6 +827,7 @@ button.contactButton:before {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 6px;
 }
 .footer-menu ul {
   display: flex;
