@@ -60,7 +60,7 @@ jQuery(document).ready(function($) {
 
   // Affiche/Cache le menu selon la largeur de la fenêtre
   function toggleMenuBasedOnWidth() {
-      if ($(window).width() <= 1025) {
+      if ($(window).width() <= 1024) {
           $("#site-navigation:not(.toggled)").hide();
           $(".menu-toggle").show();
       } else {
