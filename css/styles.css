@@ -107,7 +107,7 @@ p {
 .header-menu nav ul li a {
   text-decoration: none;
   color: var(--noir-100);
-  font-family: "Space Mono";
+  font-family: "Space Mono", monospace;
   font-size: 16px;
 }
 
@@ -302,7 +302,7 @@ div.entry-content {
   transition: transform 0.3s ease;
 }
 .custom-filter .selected-option p {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
@@ -485,14 +485,14 @@ div.entry-content {
 .photo-title {
   bottom: 12px;
   left: 17px;
-  font-family: "Space Mono", sans-serif;
+  font-family: "Space Mono", monospace;
   font-size: 14px;
 }
 
 .photo-category {
   bottom: 12px;
   right: 23px;
-  font-family: "Space Mono", sans-serif;
+  font-family: "Space Mono", monospace;
   font-size: 14px;
 }
 
@@ -587,7 +587,7 @@ div.entry-content {
   padding-bottom: 35px;
 }
 .left-column p {
-  font-family: "Space Mono";
+  font-family: "Space Mono", monospace;
   font-size: 14px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
