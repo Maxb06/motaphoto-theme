@@ -220,7 +220,7 @@ div.entry-content {
   justify-content: center;
   align-items: center;
   max-width: 1440px;
-  width: 93.5vw;
+  width: 100vw;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -840,14 +840,13 @@ button.contactButton:before {
   #footer-container {
     height: 207px;
     border-top: 1px solid #000;
-    border: 3px solid blue;
     display: flex;
   }
   .footer-menu {
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
-    height: 100%;
+    height: auto;
+    width: 100%;
   }
 }
 
