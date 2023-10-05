@@ -135,7 +135,7 @@ width: 27.42px;
 height: 18.82px;
 }
 
-/* Media Queries */
+/* Media Queries Header */
 
 @media (max-width: 1024px) {
   #main-content {
@@ -166,7 +166,6 @@ height: 18.82px;
       align-items: center;
       height: auto;
       width: 100vw;    
-      overflow: hidden;
   }
 
   #site-navigation.toggled {
@@ -247,7 +246,7 @@ div.entry-content {
   justify-content: center;
   align-items: center;
   max-width: 1440px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -261,6 +260,18 @@ div.entry-content {
       width: 55vw;
       height: auto;
     }
+}
+
+/* Media queries hero header */
+
+@media (max-width: 1024px) {
+  .hero-header {
+    height: 50vh;  
+  }
+
+  .photo-event img {
+    width: 70%; 
+  }
 }
 
 /* Page d'accueil */
@@ -598,9 +609,6 @@ div.entry-content {
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 38px;   
-    @media (max-width: 1024px) {         // Responsive page photo
-      flex-direction : column-reverse;
-    }
 }
 
 .left-column {
@@ -746,11 +754,7 @@ button {
   justify-content: space-between;
   margin-right: 7.6vw;
   margin-left: 7.6vw;
-  gap: 20px;
-
-  @media (max-width: 1024px) { 
-    flex-direction: column;
-  }
+  gap: 20px; 
 }
 
 .related-btn {          
@@ -758,6 +762,18 @@ button {
   justify-content: center;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+
+/* Media Queries page photographie */
+
+@media (max-width: 1024px) {    
+  .both-columns {
+    flex-direction: column-reverse;
+  }
+
+  .container-photos {
+    flex-direction: column;
+  }
 }
 
 /* Modale Contact */
@@ -801,7 +817,7 @@ button {
   display: none;
 }
 
-/* Formulaire modale page photo */
+/* Stylisation modale contact */
 
 .wpcf7-form label {
   font-size: 12px;
@@ -885,7 +901,7 @@ button {
       }
       
       .menu-item {
-          margin-right: 86px;      // Taille à définir
+          margin-right: 86px;    
 
           &:last-child {
               margin-right: 0;
@@ -894,7 +910,7 @@ button {
   }
 
   p {
-      margin-left: 86px;    // Taille à définir
+      margin-left: 86px;    
       font-family: Space Mono;
       font-size: 16px;
   }

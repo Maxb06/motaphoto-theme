@@ -127,7 +127,7 @@ p {
   height: 18.82px;
 }
 
-/* Media Queries */
+/* Media Queries Header */
 @media (max-width: 1024px) {
   #main-content {
     margin-top: 80px;
@@ -154,7 +154,6 @@ p {
     align-items: center;
     height: auto;
     width: 100vw;
-    overflow: hidden;
   }
   #site-navigation.toggled {
     display: flex;
@@ -220,7 +219,7 @@ div.entry-content {
   justify-content: center;
   align-items: center;
   max-width: 1440px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -236,6 +235,15 @@ div.entry-content {
   height: auto;
 }
 
+/* Media queries hero header */
+@media (max-width: 1024px) {
+  .hero-header {
+    height: 50vh;
+  }
+  .photo-event img {
+    width: 70%;
+  }
+}
 /* Page d'accueil */
 #photo-container {
   display: flex;
@@ -543,11 +551,6 @@ div.entry-content {
   align-items: flex-end;
   margin-top: 38px;
 }
-@media (max-width: 1024px) {
-  .both-columns {
-    flex-direction: column-reverse;
-  }
-}
 
 .left-column {
   width: 420px; /* Taille à définir */
@@ -692,11 +695,6 @@ button.contactButton:before {
   margin-left: 7.6vw;
   gap: 20px;
 }
-@media (max-width: 1024px) {
-  .container-photos {
-    flex-direction: column;
-  }
-}
 
 .related-btn {
   display: flex;
@@ -705,6 +703,15 @@ button.contactButton:before {
   margin-top: 10px;
 }
 
+/* Media Queries page photographie */
+@media (max-width: 1024px) {
+  .both-columns {
+    flex-direction: column-reverse;
+  }
+  .container-photos {
+    flex-direction: column;
+  }
+}
 /* Modale Contact */
 #contactModal {
   display: none;
@@ -745,7 +752,7 @@ button.contactButton:before {
   display: none;
 }
 
-/* Formulaire modale page photo */
+/* Stylisation modale contact */
 .wpcf7-form label {
   font-size: 12px;
   font-weight: 500;
