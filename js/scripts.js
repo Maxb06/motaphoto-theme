@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
 
   // Affiche/Cache le menu selon la largeur de la fenêtre
   function toggleMenuBasedOnWidth() {
-      if ($(window).width() <= 1024) {
+      if ($(window).width() <= 768) {
           $("#site-navigation:not(.toggled)").hide();
           $(".menu-toggle").show();
       } else {
@@ -91,7 +91,7 @@ jQuery(document).ready(function($) {
 
   // Fermeture du menu quand un élément est cliqué
   $("#site-navigation ul li a").on('click', function() {
-      if ($(window).width() <= 1025) {
+      if ($(window).width() <= 768) {
           $("#site-navigation").hide().removeClass("toggled");
           $(".menu-toggle").show();
           $(".close-menu").hide();

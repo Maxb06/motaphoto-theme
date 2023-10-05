@@ -128,7 +128,7 @@ p {
 }
 
 /* Media Queries Header */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   #main-content {
     margin-top: 80px;
     height: 100vh;
@@ -245,7 +245,7 @@ div.entry-content {
 }
 
 /* Media queries hero header */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .hero-header {
     width: 100vw;
     height: 50vh;
@@ -525,7 +525,7 @@ div.entry-content {
 
 /* Media Queries page accueil filtres et vignettes photo */
 /* MQ Filtres */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .photo-filters {
     display: flex;
     flex-direction: column;
@@ -554,7 +554,7 @@ div.entry-content {
   }
 }
 /* MQ Vignettes*/
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .photo-catalog {
     display: flex;
     flex-direction: column;
@@ -569,7 +569,6 @@ div.entry-content {
   .photo-item img {
     box-sizing: border-box;
     background-size: cover;
-    width: 100vw;
   }
 }
 /* Page photographie */
@@ -732,7 +731,7 @@ button.contactButton:before {
 }
 
 /* Media Queries page photographie */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .both-columns {
     flex-direction: column-reverse;
   }
@@ -872,7 +871,7 @@ button.contactButton:before {
 }
 
 /* Media queries footer */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   #footer-container {
     height: 207px;
     border-top: 1px solid #000;
