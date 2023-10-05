@@ -193,7 +193,7 @@ p {
     margin-bottom: 0;
   }
 }
-/* Animation éléments du menu */
+/* Animation liens du menu */
 .menu a {
   transition: all 0.5s;
 }
@@ -318,6 +318,7 @@ div.entry-content {
   padding-left: 16px;
 }
 
+/* Media queries filtres */
 @media (max-width: 1025px) {
   .photo-filters {
     display: flex;

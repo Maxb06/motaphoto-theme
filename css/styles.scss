@@ -212,7 +212,7 @@ height: 18.82px;
   }
 }
 
-/* Animation éléments du menu */
+/* Animation liens du menu */
 .menu {
   a {
     transition: all 0.5s;
@@ -297,7 +297,6 @@ div.entry-content {
   justify-content: flex-end;
 } 
 
-// Styles pour le conteneur du filtre
 .custom-filter {
   position: relative; 
   font-family: 'Poppins', sans-serif;
@@ -354,7 +353,8 @@ div.entry-content {
   }
 }
 
-@media (max-width:1025px) {    // @media Filtres Responsive 
+/* Media queries filtres */
+@media (max-width:1025px) {    
   .photo-filters {
     display: flex;
     flex-direction: column;
