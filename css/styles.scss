@@ -819,11 +819,81 @@ button {
 @media (max-width: 768px) {    
   .both-columns {
     flex-direction: column-reverse;
+    align-items: center;
   }
 
   .container-photos {
     flex-direction: column;
   }
+}
+
+@media (max-width: 414px) {
+  .left-column {
+    width: 75%;
+    border: none;
+    p {
+      margin-top: 15px;
+      width: 70%;
+    }
+  }
+
+  .left-column h2 {
+    font-size: 46px;
+    margin-top: 20px;  
+    margin-bottom: 0px;
+  }
+
+  .right-column {
+    margin: 0;
+    width: auto;
+      img {
+        max-height: 100%;
+      }
+  
+  .photo-wrapper {
+    width: 265px;
+    height: 397px;
+  }
+}
+
+  .bottom-column {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 135px;
+    margin: 0;
+  }
+  .bottom-column-left {
+    width: 75%;
+    margin-left: 54px;
+   
+    .contact-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 135px;
+      p {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .bottom-column-right {
+    display: none;
+  }
+
+  .title-related-photos {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .related-photo-item {
+    width: 100%;
+  }
+
 }
 
 /* Modale Contact */
