@@ -439,13 +439,12 @@ div.entry-content {
 }
 #lightbox-overlay #lightbox-container #close-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 3%;
+  right: 5.5%;
   cursor: pointer;
 }
 #lightbox-overlay #lightbox-container #lightbox-controls {
   position: absolute;
-  top: 50%;
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -534,6 +533,7 @@ div.entry-content {
     gap: 10px;
     height: auto;
     justify-content: center;
+    margin-left: 55px;
   }
   .filters-left {
     display: flex;
@@ -573,17 +573,20 @@ div.entry-content {
     align-items: center;
   }
   #lightbox-overlay #lightbox-container {
-    width: 100vw;
-    height: 55vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 80vh;
   }
   #lightbox-overlay #lightbox-container #lightbox-image {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-    object-fit: contain;
+    height: 80%;
+  }
+  #lightbox-overlay #lightbox-controls {
+    bottom: -7%;
+  }
+}
+@media (max-width: 414px) {
+  #lightbox-overlay #lightbox-container #lightbox-info {
+    top: 90%;
+    left: 12.5%;
+    width: 75%;
   }
 }
 /* Page photographie */
