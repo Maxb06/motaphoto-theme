@@ -504,14 +504,14 @@ div.entry-content {
 
 /* Media Queries page accueil filtres et vignettes photo */
 /* Media Queries Filtres */
-@media (max-width: 768px) {
+@media (max-width: 414px) {
   .photo-filters {
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
     gap: 10px;
-    height: auto;
     justify-content: center;
+    margin-left: 25px;
   }
   .filters-left {
     display: flex;
@@ -522,6 +522,31 @@ div.entry-content {
   .filter-right {
     display: flex;
     justify-content: flex-start;
+  }
+  .custom-filter .filter-list {
+    width: 70vw;
+  }
+}
+@media (max-width: 768px) {
+  .photo-filters {
+    display: flex;
+    margin-bottom: 40px;
+    gap: 10px;
+    height: auto;
+    justify-content: center;
+  }
+  .filters-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .filter-right {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .filters-left, .filter-right {
+    width: 40%;
   }
 }
 /* Media Queries Vignettes */
