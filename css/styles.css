@@ -219,7 +219,7 @@ div.entry-content {
 }
 
 /* Media queries hero header */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   #main-content {
     margin-top: 80px;
     height: 100vh;
@@ -227,7 +227,7 @@ div.entry-content {
     box-sizing: border-box;
   }
   .hero-header {
-    height: 50vh;
+    height: 42vh;
     box-sizing: border-box;
     background-size: cover;
     margin-bottom: 35px;
@@ -526,7 +526,7 @@ div.entry-content {
     width: 70vw;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .photo-filters {
     display: flex;
     margin-bottom: 40px;
