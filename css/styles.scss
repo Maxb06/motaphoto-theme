@@ -26,7 +26,7 @@
 
 /* Polices du site */
 
-/* Styles pour Space Mono */
+/* Police Space Mono */
 h1 {
   font-family: 'Space Mono', monospace;
   /*font-size: 96px;*/
@@ -57,20 +57,8 @@ h3 {
   text-transform: uppercase;
   color: var(--noir-100);
 }
-/*
-.description-photo { 
-  font-family: 'Space Mono', monospace;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  color: var(--noir-100);
-}
-*/
 
-/* Styles pour Poppins */
+/* Police Poppins */
 p {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
@@ -664,9 +652,9 @@ div.entry-content {
 }
 
 .left-column {
-  width: 420px;   /* Taille à définir */
+  width: 420px;   
   height: auto;   
-  width: 50%;     /* Taille à définir */
+  width: 50%;     
   border-bottom: 1px solid black;
   margin-left: 7.6vw;   
   margin-right: 10px;
@@ -853,8 +841,8 @@ button {
 
 .modal-content {
   position: relative;
-  width: 597px;     // Taille à définir
-  height: 769px;    // Taille à définir
+  width: 597px;     
+  height: 769px;    
   background-color: #fff;
   border: 1px solid #ccc;
   display: flex; 
@@ -893,14 +881,14 @@ button {
 
 .wpcf7-form input[type="text"],
 .wpcf7-form input[type="email"] {
-  width: 263px;        // Taille à définir
-  height: 40px;         // Taille à définir
+  width: 263px;        
+  height: 40px;        
   margin-bottom: 20px;  
 }
 
 .wpcf7-form textarea {
-  width: 263px;    // Taille à définir
-  height: 210px;   // Taille à définir
+  width: 263px;    
+  height: 210px;   
   resize: none;
 }
 
@@ -929,12 +917,56 @@ button {
 }
 
 .wpcf7-form input[type="submit"] {
-  width: 263px;               // Taille à définir
-  height: 50px;                // Taille à définir
+  width: 263px;               
+  height: 50px;                
   background: var(--Gris-medium);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
   font-size: 12px;
   border-radius: 0;
+}
+
+/* Media Queries modale contact */
+
+@media (max-width:414px) {
+  .modal-content {
+    width: 286px;
+    height: 583px;
+  }
+
+  .popup-contact h2 {
+    font-size: 34px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .wpcf7-form textarea {
+    width: 190px;   
+    height: 149px;
+  }
+
+  .wpcf7-form input[type="text"],
+  .wpcf7-form input[type="email"] {
+    width: 190px;              
+    margin-bottom: 14px;
+  }
+
+  #photo-reference {
+    margin-bottom: 0;
+  }
+
+  .wpcf7-form input[type="submit"] {
+    width: 190px;
+    margin-bottom: 19px;
+  }
+
+  .wpcf7-response-output {
+    display: none;
+  }
+
+  .wpcf7-not-valid-tip {
+    font-size: 0.8em;
+  }
+
 }
 
 /* Footer */
