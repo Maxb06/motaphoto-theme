@@ -394,7 +394,7 @@ div.entry-content {
 #lightbox-overlay #lightbox-container {
   position: relative;
   width: 100vw;
-  height: 92vh;
+  height: 94vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -566,7 +566,7 @@ div.entry-content {
     height: 80%;
   }
   #lightbox-overlay #lightbox-controls {
-    bottom: -7%;
+    bottom: -5%;
   }
 }
 @media (max-width: 414px) {
