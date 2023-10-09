@@ -15,7 +15,7 @@
     <div id="page">
         <header>
             <div class="header-menu">
-                <a href="http://motaphoto.local/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo.png" alt="Logo du site"></a>
+                <a href="https://motaphoto.com"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo.png" alt="Logo du site"></a>
                 <button class="menu-toggle">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-menu.png" alt="Ouvrir le menu">
                 </button>
