@@ -28,5 +28,3 @@
             </div>
         </header>
         <main id="main-content">
-
-    
