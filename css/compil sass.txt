@@ -1,6 +1,4 @@
-cd C:\Users\maxim\Desktop\WordPress Local\motaphoto\app\public\wp-content\themes\motaphoto-theme\css
-
-
+cd "Répertoire du fichier scss"
 
 sass --watch styles.scss:styles.css
 
