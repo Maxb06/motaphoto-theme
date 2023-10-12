@@ -932,11 +932,6 @@ button.contactButton:before {
     width: 286px;
     height: auto;
   }
-  .popup-contact h2 {
-    font-size: 34px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
   .wpcf7-form textarea {
     width: 190px;
     height: 149px;
