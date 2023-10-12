@@ -835,7 +835,7 @@ button.contactButton:before {
 .modal-content {
   position: relative;
   width: 597px;
-  height: 769px;
+  height: auto;
   background-color: #fff;
   border: 1px solid #ccc;
   display: flex;
@@ -850,12 +850,15 @@ button.contactButton:before {
   align-items: center;
   justify-content: center;
 }
-.popup-contact h2 {
-  margin-top: 25px;
-  margin-bottom: 30px;
-  font-size: 66px;
-}
 
+/* Correction en-tête modale contact */
+#contact-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin-top: 18px;
+  margin-bottom: 40px;
+} /* Fin correction */
 .wpcf7-spinner {
   display: none;
 }
@@ -914,13 +917,20 @@ button.contactButton:before {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
   font-size: 12px;
   border-radius: 0;
+  margin-bottom: 35px;
+}
+
+/* Mise en forme message erreur popup contact */
+.wpcf7-response-output {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /* Media Queries modale contact */
 @media (max-width: 414px) {
   .modal-content {
     width: 286px;
-    height: 583px;
+    height: auto;
   }
   .popup-contact h2 {
     font-size: 34px;
@@ -948,6 +958,12 @@ button.contactButton:before {
   }
   .wpcf7-not-valid-tip {
     font-size: 0.8em;
+  }
+  .wpcf7-submit {
+    margin-bottom: 24px !important;
+  }
+  #contact-image {
+    margin-bottom: 14px;
   }
 }
 /* Footer */
